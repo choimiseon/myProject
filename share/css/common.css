@@ -1,1 +1,19 @@
 @charset "UTF-8";
+
+/* 이 사이트에 전체적으로 적용할 내용 */
+@import url(https://fonts.googleapis.com/earlyaccess/notosanskr.css);
+html {font-family:"Noto Sans KR", sans-serif;}
+/*html, body {overflow-x:hidden;}*/
+
+/************** common **************/
+* {margin:0; padding:0;}
+html,body {height:100%;}
+body {background:#fff;font-size:14px; letter-spacing:-0.5px; color:#333; line-height:20px;font-family:Noto Sans KR, sans-serif; font-weight:400;}
+body,button,h1,h2,h3,h4,h5,input,select,table,textarea{font-size:14px;line-height:1.267em}
+ol, ul {list-style:none;}
+h2 {font-size:30px}
+a {text-decoration:none}
+
+
+
+/* index list */

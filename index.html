@@ -6,23 +6,29 @@
 	<meta http-equiv="Content-Script-Type" content="text/javascript">
 	<meta http-equiv="Content-Style-Type" content="text/css">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
-	<title>my project</title>
-	
-	<link rel="stylesheet" href="/myproject/share/css/reset.css">
+	<title>CHOIMISEON | MY PROJECT</title>
+
 	<link rel="stylesheet" href="/myproject/share/css/common.css">
 	<link rel="stylesheet" href="/myproject/share/css/style.css">
-	
+
 	<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/1.12.4/jquery.js" charset="utf-8"></script>
 </head>
 <body>
 <div id="wrap">
-	<header>
-		<h1>아...</h1>
-		<nav>
-			
-		</nav>
-	</header>
+	<div include-html="/myproject/inc/header.html"></div>
+	<div include-html="/myproject/inc/list.html"></div>
+	<!-- Pagination links -->
+	<!--
+	<div class="pagination">
+		<span class="page-item">&laquo;</span>
+		<span class="page-item">1</span>
+		<a href="#" class="page-item">2</a>
+		<a href="#" class="page-item">&raquo;</a>
+	</div>
+	-->
+	<div include-html="/myproject/inc/footer.html"></div>
 </div>
 <script type="text/javascript" src="/myproject/share/js/include_html.js" charset="utf-8"></script>
+<script type="text/javascript" src="/myproject/share/js/common.js" charset="utf-8"></script>
 </body>
 </html>
