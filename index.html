@@ -2,7 +2,7 @@
 <html lang="ko">
 <head>
 	<meta charset="UTF-8">
-	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<meta http-equiv="Content-Script-Type" content="text/javascript">
 	<meta http-equiv="Content-Style-Type" content="text/css">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -10,17 +10,124 @@
 
 	<link rel="stylesheet" href="/myproject/share/css/common.css">
 	<link rel="stylesheet" href="/myproject/share/css/style.css">
+	<!-- <link rel="stylesheet" href="/myproject/share/css/style_mobile.css"> -->
+	<link rel="stylesheet" href="/myproject/share/css/style_desktop.css">
 
 	<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/1.12.4/jquery.js" charset="utf-8"></script>
 </head>
 <body>
+<!--S: skipnav -->
+<!-- <ul class="skipnav">
+	<li><a href="#gnb">본문 바로가기</a></li>
+	<li><a href="#">주 메뉴 바로가기</a></li>
+</ul> -->
+<!--E: skipnav -->
 <div id="wrap">
-	<div include-html="/myproject/inc/header.html"></div>
-	<div include-html="/myproject/inc/list.html"></div>
-	<div>메인 컨텐츠</div>
-	<div include-html="/myproject/inc/footer.html"></div>
+	<!-- <header id="header">
+		<h1>로고</h1>
+		<nav id="gnb">
+			<ul>
+				<li><a href="#">메뉴1</a></li>
+				<li><a href="#">메뉴2</a></li>
+				<li><a href="#">메뉴3</a></li>
+				<li><a href="#">메뉴4</a>
+					<ul>
+						<li><a href="#">서브 메뉴1</a></li>
+						<li><a href="#">서브 메뉴2</a></li>
+						<li><a href="#">서브 메뉴3</a></li>
+					</ul>
+				</li>
+			</ul>
+		</nav>
+		<div><a href="#">제품 검색</a></div>
+	</header> -->
+	<div id="container">
+		<!-- <div class="kev_visual">
+			<div class="sec_inner">
+				<h2>서브 상단 비주얼 텍스트</h2>
+			</div>
+		</div> -->
+		<div class="sub_tab">
+			<ul class="tab">
+				<li><a href="#">모든메뉴</a></li>
+				<li><a href="#">제품1</a></li>
+				<li><a href="#">제품2</a></li>
+				<li><a href="#">제품3</a></li>
+				<li><a href="#">제품4</a></li>
+				<li><a href="#">제품5</a></li>
+				<li><a href="#">제품6</a></li>
+				<li><a href="#">제품7</a></li>
+			</ul>
+			
+			<div id="products_list"> <!-- 이미지 마크업 생성 공간 --> </div>
+
+			<!-- <ul id="listLayout">
+				<li><a href="#"><img src="/myproject/share/images/products/img_1_1.jpg" alt="제품이미지"><i>텍스트</i></a></li>
+			</ul> -->
+			
+		</div>
+	</div><!--E: container -->
+	<!-- <footer id="footer">
+		<button type="button" class="btn_top">TOP으로 이동(이동할 위치 명기)</button>
+		<div>로고</div>
+		<address>&copy; Copyright</address>
+	</footer> --><!--E: footer -->
+	
 </div>
-<script type="text/javascript" src="/myproject/share/js/include_html.js" charset="utf-8"></script>
+<!-- <script type="text/javascript" src="/myproject/share/js/include_html.js" charset="utf-8"></script> -->
 <script type="text/javascript" src="/myproject/share/js/common.js" charset="utf-8"></script>
+
+<script>
+	$(function(){
+		$.ajax({ 
+			url: '/myproject/product2.json', 
+			type: 'GET', 
+			dataType : 'json', 
+			success : function (data) { 
+				createImages(data) 
+			} 
+		});
+		
+		// JSON 포멧 데이터 처리 
+		function createImages(objImageInfo) { 
+			var images = objImageInfo.images; 
+			var strDOM = ""; 
+			for (var i = 0; i < images.length; i++) { 
+				// N번째 이미지 정보를 구하기 
+				var image = images[i]; // N번째 이미지 패널을 생성 
+				strDOM += '<li><a href="#">'; 
+				strDOM += '<img src="' + image.url + '" alt="' + image.title + '">';
+				strDOM += '<i class="title">' + image.title + '</i>'; 
+				strDOM += '</a></li>'; 
+			} // 이미지 컨테이너에 생성한 이미지 패널들을 추가하기 
+			var $imageContainer = $("#products_list"); 
+			$imageContainer.append(strDOM); 
+		}
+
+        $('.sub_tab .tab a').on('click', function(e){
+			e.preventDefault();
+			/* $.each(data, function(i, item) {
+				 $.each(item, function(index,tt){
+					 alert(tt.data);
+				});
+			}); */
+			
+			/* $.ajax({
+	    	   type:"GET",
+				url:"/myproject/product.json",
+				dataType : 'json',
+				contentType:"application/json; charset=UTF-8", 
+	    	    success:function(data){
+	    	    	//alert(data.products1.image);
+	    	    	alert(data.aaa);
+	    	    },
+	    	    error:function(){
+	            	alert("ajax통신 실패!!!");
+	            }
+	    	}); */
+        });
+	});
+</script>
+
 </body>
 </html>

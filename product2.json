@@ -1,0 +1,36 @@
+
+{"products":[
+	{
+		"brand": "제품1",
+		"info" :[
+			{"name":"img_1_1", "imagePath":"/myproject/share/images/products/img_1_1.jpg"},
+			{"name":"img_1_2", "imagePath":"/myproject/share/images/products/img_1_2.jpg"},
+			{"name":"img_1_3", "imagePath":"/myproject/share/images/products/img_1_3.jpg"},
+			{"name":"img_1_4", "imagePath":"/myproject/share/images/products/img_1_4.jpg"},
+			{"name":"img_1_5", "imagePath":"/myproject/share/images/products/img_1_5.jpg"},
+			{"name":"img_1_6", "imagePath":"/myproject/share/images/products/img_1_6.jpg"},
+			{"name":"img_1_7", "imagePath":"/myproject/share/images/products/img_1_7.jpg"}
+		]
+	},
+	{
+		"brand": "제품2",
+		"info" :[
+			{"name":"img_2_1", "imagePath":"/myproject/share/images/products/img_2_1.jpg"},
+			{"name":"img_2_2", "imagePath":"/myproject/share/images/products/img_2_2.jpg"},
+			{"name":"img_2_3", "imagePath":"/myproject/share/images/products/img_2_3.jpg"},
+			{"name":"img_2_4", "imagePath":"/myproject/share/images/products/img_2_4.jpg"}
+		]
+	},
+	{
+		"brand": "제품3",
+		"info" :[
+			{"name":"img_3_1", "imagePath":"/myproject/share/images/products/img_3_1.jpg"},
+			{"name":"img_3_2", "imagePath":"/myproject/share/images/products/img_3_2.jpg"},
+			{"name":"img_3_3", "imagePath":"/myproject/share/images/products/img_3_3.jpg"},
+			{"name":"img_3_4", "imagePath":"/myproject/share/images/products/img_3_4.jpg"}
+		]
+	}
+]}
+
+
+ 

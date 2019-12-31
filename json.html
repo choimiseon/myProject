@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta http-equiv="Content-Script-Type" content="text/javascript">
+	<meta http-equiv="Content-Style-Type" content="text/css">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<title>CHOIMISEON | MY PROJECT</title>
+	
+	<link rel="stylesheet" href="http://ajax.googleapis.com/ajax/libs/jqueryui/1.8.9/themes/base/jquery-ui.css" type="text/css" media="all" />
+	<link rel="stylesheet" href="/myproject/share/css/common.css">
+	<link rel="stylesheet" href="/myproject/share/css/style.css">
+	<!-- <link rel="stylesheet" href="/myproject/share/css/style_mobile.css"> -->
+	<link rel="stylesheet" href="/myproject/share/css/style_desktop.css">
+	
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/1.12.4/jquery.js" charset="utf-8"></script>
+	<!-- <script src="http://code.jquery.com/jquery-migrate-1.2.1.js"></script> -->
+	<script src="http://ajax.googleapis.com/ajax/libs/jqueryui/1.8.9/jquery-ui.min.js"></script>
+	
+</head>
+<body>
+<!--S: skipnav -->
+<!-- <ul class="skipnav">
+	<li><a href="#gnb">본문 바로가기</a></li>
+	<li><a href="#">주 메뉴 바로가기</a></li>
+</ul> -->
+<!--E: skipnav -->
+<div id="wrap">
+	<!-- <header id="header">
+		<h1>로고</h1>
+		<nav id="gnb">
+			<ul>
+				<li><a href="#">메뉴1</a></li>
+				<li><a href="#">메뉴2</a></li>
+				<li><a href="#">메뉴3</a></li>
+				<li><a href="#">메뉴4</a>
+					<ul>
+						<li><a href="#">서브 메뉴1</a></li>
+						<li><a href="#">서브 메뉴2</a></li>
+						<li><a href="#">서브 메뉴3</a></li>
+					</ul>
+				</li>
+			</ul>
+		</nav>
+		<div><a href="#">제품 검색</a></div>
+	</header> -->
+	<div id="container">
+		
+		<div class="sub_tab">
+			<div id="tabs">
+				<ul class="tab">
+					<!-- <li><a href="#">모든메뉴</a></li> -->
+				</ul>
+				<div id="products_list"></div> <!-- 이미지 마크업 생성 공간 --> 
+			</div>
+			
+			<!-- <ul id="listLayout">
+				<li><a href="#"><img src="/myproject/share/images/products/img_1_1.jpg" alt="제품이미지"><i>텍스트</i></a></li>
+			</ul> -->
+			
+		</div>
+	</div><!--E: container -->
+</div>
+<script type="text/javascript" src="/myproject/share/js/common.js" charset="utf-8"></script>
+
+<script>
+	$(function(){
+		var data = [
+			{
+				"core":"tabs-1",
+				"info":[
+					{"name":"img_1_1", "imagePath":"/myproject/share/images/products/img_1_1.jpg"},
+					{"name":"img_1_2", "imagePath":"/myproject/share/images/products/img_1_2.jpg"}
+				]
+			},
+			{
+				"core":"tabs-2",
+				"info":[
+					{"name":"img_2_1", "imagePath":"/myproject/share/images/products/img_2_1.jpg"},
+					{"name":"img_2_2", "imagePath":"/myproject/share/images/products/img_2_2.jpg"}
+				]
+			}
+			/* ,
+			{"core":"tabs-2","info":"img_1_2"},
+			{"core":"tabs-3","info":"img_1_3"} */
+		];
+
+		var stringData = "";
+
+		for (var i = 0; i < data.length; i++) {
+			
+			$.each(data[i].info, function(){
+				console.log(this.name);
+				stringData += '<li><a href="#' + data[i].core + '">' + data[i].info + '</a></li>';
+			  	var $listContainer = $('#products_list');
+				$listContainer.append('<div id="' + data[i].core + '"> ' + data[i].info + ' </div>');
+			})
+			
+		}
+		//console.log(stringData);
+		$('.tab').append(stringData);
+		$("#tabs").tabs();
+	});
+</script>
+
+</body>
+</html>
