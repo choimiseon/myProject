@@ -1,0 +1,87 @@
+@charset "UTF-8";
+@import url(http://fonts.googleapis.com/earlyaccess/nanumgothic.css); /* 나눔고딕 (Nanum Gothic) */
+@import url(http://fonts.googleapis.com/earlyaccess/nanumgothiccoding.css); /* 나눔고딕코딩  (Nanum Gothic Coding) */
+@import url(http://fonts.googleapis.com/earlyaccess/nanummyeongjo.css); /* 나눔명조 (Nanum Myeongjo) */
+@import url(http://cdn.jsdelivr.net/font-nanum/1.0/nanumbarungothic/nanumbarungothic.css); /* 나눔바른고딕 (Nanum Barun Gothic)  */
+@import url(http://cdn.rawgit.com/hiun/NanumSquare/master/nanumsquare.css); /* 나눔스퀘어 (Nanum Square)   */
+@import url(https://fonts.googleapis.com/css?family=Noto+Sans+KR&display=swap); /* 노토산스 (Noto Sans KR)   */
+
+
+
+
+/* normal */
+@font-face {
+	font-family: KelloggsSans;
+	src: local(KelloggsSans-Light),
+	url(/myproject/assets/font/KelloggsSans-Light.woff) format('woff'),
+    url(/myproject/assets/font/KelloggsSans-Light.otf) format('truetype');
+  	font-weight: 300;
+  	font-style: normal;
+}
+@font-face {
+	font-family: KelloggsSans;
+	src: local(KelloggsSans-Regular),
+	url(/myproject/assets/font/KelloggsSans-Regular.woff) format('woff'),
+    url(/myproject/assets/font/KelloggsSans-Regular.otf) format('truetype');
+  	font-weight: 400;
+  	font-style: normal;
+}
+@font-face {
+	font-family: KelloggsSans;
+	src: local(KelloggsSans-Medium),
+	url(/myproject/assets/font/KelloggsSans-Medium.woff) format('woff'),
+    url(/myproject/assets/font/KelloggsSans-Medium.otf) format('truetype');
+  	font-weight: 500;
+  	font-style: normal;
+}
+@font-face {
+	font-family: KelloggsSans;
+	src: local(KelloggsSans-Bold),
+	url(/myproject/assets/font/KelloggsSans-Bold.woff) format('woff'),
+    url(/myproject/assets/font/KelloggsSans-Bold.otf) format('truetype');
+  	font-weight:700;
+  	font-style:normal;
+}
+@font-face {
+	font-family: KelloggsHandwritten-Regular;
+	src: local(KelloggsHandwritten-Regular),
+	url(/myproject/assets/font/KelloggsHandwritten-Regular.woff) format('woff'),
+    url(/myproject/assets/font/KelloggsHandwritten-Regular.otf) format('truetype');
+  	font-weight: normal;
+  	font-style: normal;
+}
+
+/* Italic */
+@font-face {
+	font-family: KelloggsSans-Italic;
+	src: local(KelloggsSans-LightItalic),
+	url(/myproject/assets/font/KelloggsSans-LightItalic.woff) format('woff'),
+    url(/myproject/assets/font/KelloggsSans-LightItalic.otf) format('truetype');
+  	font-weight: 300;
+  	font-style: italic;
+}
+@font-face {
+	font-family: KelloggsSans-Italic;
+	src: local(KelloggsSans-MediumItalic),
+	url(/myproject/assets/font/KelloggsSans-MediumItalic.woff) format('woff'),
+    url(/myproject/assets/font/KelloggsSans-MediumItalic.otf) format('truetype');
+  	font-weight: 500;
+  	font-style: italic;
+}
+@font-face {
+	font-family: KelloggsSans-Italic;
+	src: local(KelloggsSans-BoldItalic),
+	url(/myproject/assets/font/KelloggsSans-BoldItalic.woff) format('woff'),
+    url(/myproject/assets/font/KelloggsSans-BoldItalic.otf) format('truetype');
+  	font-weight: 700;
+  	font-style: italic;
+}
+
+/* KelloggsSans-Italic */
+
+
+
+
+
+ 
+

@@ -71,7 +71,8 @@
 				"core":"tabs-1",
 				"info":[
 					{"name":"img_1_1", "imagePath":"/myproject/share/images/products/img_1_1.jpg"},
-					{"name":"img_1_2", "imagePath":"/myproject/share/images/products/img_1_2.jpg"}
+					{"name":"img_1_2", "imagePath":"/myproject/share/images/products/img_1_2.jpg"},
+					{"name":"img_1_3", "imagePath":"/myproject/share/images/products/img_1_3.jpg"}
 				]
 			},
 			{
@@ -87,19 +88,50 @@
 		];
 
 		var stringData = "";
-
-		for (var i = 0; i < data.length; i++) {
+		var stringData2 = "";
+		
+		//for (var i = 0; i < data.length; i++) {
+			$.each(data, function(i){
+				//console.log(data[i].info);
+				stringData += '<li><a href="#' + data[i].core + '">' + data[i].core + '</a></li>';
+				//if(data[i].info){
+					//console.log('if');
+				//console.log(data[i].info[i].name);
+				//var $listContainer = $('#products_list');
+				//$listContainer.append('<div id="' + data[i].core + '"> ' + data[i].info.name + ' </div>');
+				//}
+				
+				
+				$.each(data[i].info, function(j){
+					if(data[i].info.length){
+						stringData2 += data[i].info[j].name;
+						//$listContainer.append(data[i].info[j].name);
+						//$listContainer.append('</div>');
+					}
+				});
+				$('#products_list').append('<div id="' + data[i].core + '">'+ stringData2 +'</div>');
+				
+				
+					
+			});
+			/* $.each(data, function(j){
+				console.log(data[j].info);
+				var $listContainer = $('#products_list');
+				$listContainer.append('<div id="' + data[i].core + '"> ' + data[i].info + ' </div>');
+			}); */
+			$('.tab').append(stringData);
+			//var $listContainer = $('#products_list');
 			
-			$.each(data[i].info, function(){
-				console.log(this.name);
+			
+			/* $.each(data[i].info, function(){
 				stringData += '<li><a href="#' + data[i].core + '">' + data[i].info + '</a></li>';
 			  	var $listContainer = $('#products_list');
 				$listContainer.append('<div id="' + data[i].core + '"> ' + data[i].info + ' </div>');
-			})
+			}) */
 			
-		}
+		//}
 		//console.log(stringData);
-		$('.tab').append(stringData);
+		//$('.tab').append(stringData);
 		$("#tabs").tabs();
 	});
 </script>
