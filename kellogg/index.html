@@ -34,7 +34,6 @@
 	<link rel="stylesheet" href="/myproject/assets/css/kellogg.css">
 	
 	<script src="/myproject/assets/js/jquery-3.4.1.min.js" charset="utf-8"></script>
-	<script src="/myproject/assets/js/kellogg.js" charset="utf-8"></script>
 	<script src="/myproject/assets/js/jquery.nanoscroller.js" charset="utf-8"></script>
 	<!-- <script src="/myproject/assets/js/jquery.nanoscroller.min.js" charset="utf-8"></script> -->
 </head>
@@ -57,7 +56,7 @@
 				src="/myproject/assets/image/common/logo_1280.png" alt="">
 			</a>
 		</h1>
-		<button class="button menu_open">
+		<button type="button" class="button menu_open">
 			<div class="k_icon ham_menu">
 				<i></i>
 				<i></i>
@@ -71,27 +70,26 @@
 					<i></i>
 				</div>
 			</button>
-			<div class="">
-				<ul class="gnb">
-					<li><a href="#">Brand &amp; Products</a></li>
-					<li><a href="#">Cereal &amp; Nutrition</a></li>
-					<li><a href="#">Better Days</a></li>
-					<li><a href="#" class="k_icon arrow_down">About Kellogg's</a>
-						<ul>
-							<li><a href="#">회사소개</a></li>
-							<li><a href="#">켈로그의 약속</a></li>
-							<li><a href="#">켈로그의 가치</a></li>
-							<li><a href="#">인재 채용</a></li>
-							<li><a href="#">찾아오시는 길</a></li>
-							<li><a href="#">FAQ</a></li>
-						</ul>
-					</li>
-				</ul>
-				<ul class="menu_sns">
-					<li><a href="#"><img src="/myproject/assets/image/common/sns.png" alt="sns"></a></li>
-				</ul>
+			<div class="innerGnb">
+			<ul class="gnb">
+				<li><a href="#">Brand &amp; Products</a></li>
+				<li><a href="#">Cereal &amp; Nutrition</a></li>
+				<li><a href="#">Better Days</a></li>
+				<li><a href="#" class="k_icon arrow_down">About Kellogg's</a>
+					<ul>
+						<li><a href="#">회사소개</a></li>
+						<li><a href="#">켈로그의 약속</a></li>
+						<li><a href="#">켈로그의 가치</a></li>
+						<li><a href="#">인재 채용</a></li>
+						<li><a href="#">찾아오시는 길</a></li>
+						<li><a href="#">FAQ</a></li>
+					</ul>
+				</li>
+			</ul>
+			<ul class="menu_sns">
+				<li><a href="#"><img src="/myproject/assets/image/common/sns.png" alt="sns"></a></li>
+			</ul>
 			</div>
-			
 		</nav>
 	</header><!--E: header -->
 	
@@ -106,7 +104,6 @@
 		
 </div>
 
-<script>
-</script>
+<script src="/myproject/assets/js/kellogg.js" charset="utf-8"></script>
 </body>
 </html>

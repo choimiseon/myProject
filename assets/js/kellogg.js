@@ -18,13 +18,15 @@ var CommonJs = (function(){
         },
         init:function(){
         	 if(CommonJs.isMobile() == true) {
-        		 //console.log('isMobile');
-                 //$('.gu_tab_depth4').height(28);
-                 //$('#LNB .lnb_inner .lnb_cnt').addClass('isMobile')
+        		 console.log('isMobile');
+        		 $('body').addClass('isMobile');
+        		 
              }else{
             	 console.log('pc');
-                 //$('#LNB .lnb_inner .lnb_cnt').removeClass('isMobile')
+            	 $('body').removeClass('isMobile');
+            	 
              }
+        	 
         }
 	}
 
@@ -32,30 +34,58 @@ var CommonJs = (function(){
 CommonJs.init();
 
 var Gnb = (function(){
+	var k_$header = $('#header'),
+	 	k_$menu = k_$header.find('#menu_aside'),
+	 	k_$gnb = k_$menu.find('.gnb');
+	 var resizeGnb = false;
+	
 	function init(){
-		//$(window).scroll(scrollEvent);
+		resizeEvent();
+		$(window).resize(resizeEvent);
+		$(window).scroll(scrollEvent);
 		eventListener();
-		if(!CommonJs.isMobile()) {
+		gnbActive();
+		
+		//if(!CommonJs.isMobile()) {
 			
 			//$('#LNB .lnb_cnt').nanoScroller();
-		}
+		//}
 		
 	}
 	function resizeEvent(){
-		
+		//CommonJs.init();
+		if ($(window).innerWidth() <= 1279){
+            var windowH = window.innerHeight;
+
+            k_$menu.attr('height', windowH + 'px');
+
+            /*if(!g_$lnbCntNavi.hasClass('on') && !resizeGnb){
+                
+                resizeGnb = true;
+            }*/
+        }else{
+            resizeGnb = false;
+            //g_lnbBg = 0;
+            //g_$lnbLiPc.find('a').eq(0).trigger('click');
+        }
 	}
 	function scrollEvent(){
 		
 	}
 	function eventListener(){
 		/* lnb active */
-        /*$('.menu_close').on('click', function(){
+		$('.menu_open').on('click', function(){
+			k_$menu.addClass('active');
+			$('body').addClass('dim');
+        });
+        $('.menu_close').on('click', function(){
             closeLnb();
             //if(!CommonJs.isMobile()) $('body').removeClass('stop');
-        });*/
+        });
 		
-        $('.menu_open').on('click', function(){
-        	console.log('gnb 보이나요?');
+		
+        //$('.menu_open').on('click', function(){
+        	
             //$('body').addClass('isMobile');
             //$('#LNB .lnb_cnt').height(window.innerHeight - $('#LNB .lnb_tab').innerHeight());
 
@@ -69,10 +99,11 @@ var Gnb = (function(){
             //if(!CommonJs.isMobile()) $('#LNB .lnb_cnt').nanoScroller();
             //if(!CommonJs.isMobile()) $('body').addClass('stop');
 
-        });
+        //});
 	}
 	function closeLnb(){
-		
+		k_$menu.removeClass('active');
+		$('body').removeClass('dim');
 	}
 	function gnbActive(){
 		

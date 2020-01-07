@@ -16,8 +16,8 @@
 html {font-size:62.5%;}
 body, button, input, select, table, textarea {font-family:KelloggsSans, 'Nanum Gothic', sans-serif;font-weight:400;}
 .blind {position:absolute;overflow:hidden;clip: rect(0 0 0 0);margin:-1px;width:1px;height:1px;}
-.isMobile .dim {overflow:hidden;}
-.isMobile .dim::after {content:'';position:fixed;top:0;right:0;display:block;width:100%;height:100vh;background-color:rgba(0, 0, 0, 0.5);
+.isMobile.dim {overflow:hidden;}
+.isMobile.dim::after {content:'';position:fixed;top:0;right:0;display:block;width:100%;height:100vh;background-color:rgba(0, 0, 0, 0.5);
 	-webkit-transition: all 0.3s;
     -moz-transition: all 0.3s;
     -ms-transition: all 0.3s;
@@ -49,7 +49,7 @@ body, button, input, select, table, textarea {font-family:KelloggsSans, 'Nanum G
 #header .menu_open {position:absolute;top:24px;right:20px;overflow:hidden;display:inline-block;}
 #header .menu_close {position:absolute;top:24px;right:20px;}
 
-#header #menu_aside {display:none;position:absolute;top:0;right:0;width:285px;background-color:#eaecef;z-index:9999;
+#header #menu_aside {position:fixed;top:0;right:0;width:285px;background-color:#eaecef;z-index:9999;
 	-webkit-transition: all 0.3s;
     -moz-transition: all 0.3s;
     -ms-transition: all 0.3s;
@@ -61,6 +61,15 @@ body, button, input, select, table, textarea {font-family:KelloggsSans, 'Nanum G
     -o-transform: translate(100%,0);
     transform: translate(100%,0);
 }
+.innerGnb {height:100vh;}
+.isMobile #header #menu_aside.active {
+	-webkit-transform: translate(0,0);
+    -moz-transform: translate(0,0);
+    -ms-transform: translate(0,0);
+    -o-transform: translate(0,0);
+    transform: translate(0,0);
+}
+
 #header #menu_aside ul.gnb {display:flex;flex-direction:column;justify-content:center;background-color:#fff;}
 #header #menu_aside ul.gnb {padding:60px 0 0 0;}
 #header #menu_aside ul.gnb > li {}
@@ -90,7 +99,13 @@ body, button, input, select, table, textarea {font-family:KelloggsSans, 'Nanum G
 	#header {max-width:1180px;height:80px;margin:0 auto;padding:0;}
 	#header h1 {top:19px;left:50px;}
 	#header .menu_open, #header .menu_close {display:none;}
-	#header #menu_aside {position:relative;display:block;width:calc(100% - 234px);padding-left:234px;background:none;}
+	#header #menu_aside {position:relative;display:block;width:calc(100% - 234px);padding-left:234px;background:none;
+		-webkit-transform: translate(0,0);
+	    -moz-transform: translate(0,0);
+	    -ms-transform: translate(0,0);
+	    -o-transform: translate(0,0);
+	    transform: translate(0,0);
+	}
 	#header #menu_aside ul.gnb {flex-direction:row;align-items:center;justify-content:space-between;padding:0}
 	#header #menu_aside ul.gnb > li {position:relative;}
 	#header #menu_aside ul.gnb > li > a {height:80px;display:flex;align-items:center;}
