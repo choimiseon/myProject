@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="ko">
+<html lang="ko" id="no-fouc">
 <head>
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
@@ -31,10 +31,15 @@
 	
 	<link rel="stylesheet" href="/myproject/assets/css/reset.css">
 	<link rel="stylesheet" href="/myproject/assets/css/font.css">
+	<link rel="stylesheet" href="/myproject/assets/css/swiper.css">
+	<link rel="stylesheet" href="https://cdn.jsdelivr.net/bxslider/4.2.12/jquery.bxslider.css">
+	
 	<link rel="stylesheet" href="/myproject/assets/css/kellogg.css">
 	
 	<script src="/myproject/assets/js/jquery-3.4.1.min.js" charset="utf-8"></script>
 	<script src="/myproject/assets/js/jquery.nanoscroller.js" charset="utf-8"></script>
+	<script src="/myproject/assets/js/swiper.min.js" charset="utf-8"></script>
+	<script src="/myproject/assets/js/jquery.bxslider.min.js"></script>
 	<!-- <script src="/myproject/assets/js/jquery.nanoscroller.min.js" charset="utf-8"></script> -->
 </head>
 <body><!-- 메뉴오픈 시 addClass="isMobile" -->
@@ -48,7 +53,7 @@
 	<header id="header">
 		<h1>
 			<!-- <img srcset="/myproject/assets/image/common/logo_576.png, /myproject/assets/image/common/logo_768.png 1.5x, /myproject/assets/image/common/logo_1280.png 2x" src="/myproject/assets/image/common/logo_1280.png" alt="Kellogg's"> -->
-			<a href="#"><img 
+			<a href="/myproject/kellogg/index.html"><img 
 				srcset="/myproject/assets/image/common/logo_576.png 576w, 
 				/myproject/assets/image/common/logo_768.png 768w, 
 				/myproject/assets/image/common/logo_1280.png 1280w"  
@@ -71,31 +76,36 @@
 				</div>
 			</button>
 			<div class="innerGnb">
-			<ul class="gnb">
-				<li><a href="#">Brand &amp; Products</a></li>
-				<li><a href="#">Cereal &amp; Nutrition</a></li>
-				<li><a href="#">Better Days</a></li>
-				<li><a href="#" class="k_icon arrow_down">About Kellogg's</a>
-					<ul>
-						<li><a href="#">회사소개</a></li>
-						<li><a href="#">켈로그의 약속</a></li>
-						<li><a href="#">켈로그의 가치</a></li>
-						<li><a href="#">인재 채용</a></li>
-						<li><a href="#">찾아오시는 길</a></li>
-						<li><a href="#">FAQ</a></li>
-					</ul>
-				</li>
-			</ul>
-			<ul class="menu_sns">
-				<li><a href="#"><img src="/myproject/assets/image/common/sns.png" alt="sns"></a></li>
-			</ul>
-			</div>
+				<ul class="gnb">
+					<li><a href="/myproject/kellogg/index.html#Brand">Brand &amp; Products</a></li>
+					<li><a href="/myproject/kellogg/index.html#Cereal">Cereal &amp; Nutrition</a></li>
+					<li><a href="/myproject/kellogg/index.html#Better">Better Days</a></li>
+					<!-- 2dpth 있을 경우  a태그에 class="k_icon" 추가 하고 a태그 다음 ul만 추가 해주면됨. -->
+					<li><a href="/myproject/kellogg/index.html#About" class="k_icon">About Kellogg's</a>
+						<ul>
+							<li><a href="#">회사소개</a></li>
+							<li><a href="#">켈로그의 약속</a></li>
+							<li><a href="#">켈로그의 가치</a></li>
+							<li><a href="#">인재 채용</a></li>
+							<li><a href="#">찾아오시는 길</a></li>
+							<li><a href="#">FAQ</a></li>
+						</ul>
+					</li>
+				</ul>
+				<ul class="menu_sns">
+					<li><a href="#"><img src="/myproject/assets/image/common/sns.png" alt="sns"></a></li>
+				</ul>
+			</div><!-- E: innerGnb -->
 		</nav>
 	</header><!--E: header -->
 	
 	<div id="container">
-		<div class="contents">
-		</div>
+		<div class="main">
+			<div class="slider">
+				<div><img src="/myproject/assets/image/common/main1.png" alt=""></div>
+				<div><img src="/myproject/assets/image/common/main2.png" alt=""></div>
+			</div>
+		</div><!-- E: main -->
 	</div><!--E: container -->
 	
 	<footer id="footer">
