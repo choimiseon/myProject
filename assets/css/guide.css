@@ -191,6 +191,23 @@ body, button, input, select, table, textarea {font-family:KelloggsSans, 'Nanum G
 .css3 .arrow_right {}
 .css3 .arrow_left {}
 .css3 .add {}
+.css3 .plus {display:inline-block;position:relative;width:18px;height:18px;}
+.css3 .plus i {
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	margin: -1px 0 0 -9px;
+	width: 18px;
+	height:2px;
+	-webkit-transform: rotate(0);
+	transform: rotate(0);
+	background:#333;
+	display: block;
+}
+.css3 .plus i:nth-child(2) {
+	-webkit-transform: rotate(-90deg);
+	transform: rotate(-90deg);
+}
 .css3 .check {}
 .css3 .play_circle {}
 

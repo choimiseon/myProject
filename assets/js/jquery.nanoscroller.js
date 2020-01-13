@@ -22,7 +22,7 @@
       @type String
       @default 'nano-pane'
      */
-    paneClass: 'nano-pane',
+    paneClass: 'pane',
 
     /**
       a classname for the slider element.
@@ -30,7 +30,7 @@
       @type String
       @default 'nano-slider'
      */
-    sliderClass: 'nano-slider',
+    sliderClass: 'pane_slider',
 
     /**
       a classname for the content element.
@@ -38,7 +38,7 @@
       @type String
       @default 'nano-content'
      */
-    contentClass: 'nano-content',
+    contentClass: 'custom_scroll_content',
 
     /**
       a setting to enable native scrolling in iOS devices.
