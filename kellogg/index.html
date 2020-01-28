@@ -36,8 +36,7 @@
 	<link rel="stylesheet" href="/myproject/assets/css/kellogg.css">
 	
 	<script src="/myproject/assets/js/jquery-3.4.1.min.js" charset="utf-8"></script>
-	<script src="/myproject/assets/js/jquery.nanoscroller.js" charset="utf-8"></script>
-	<!-- <script src="/myproject/assets/js/jquery.nanoscroller.min.js" charset="utf-8"></script> -->
+	<script src="/myproject/assets/js/jquery.nanoscroller.min.js" charset="utf-8"></script>
 	<script src="/myproject/assets/js/swiper.min.js" charset="utf-8"></script>
 </head>
 <body><!-- 메뉴오픈 시 addClass="isMobile" -->
@@ -78,24 +77,33 @@
 			</button><!-- E: mobile/tablet 메뉴 닫기 버튼 -->
 			<div class="gnb_area">
 				<div class="gnb_inner">
-				<div class="custom_scroll_content">
-					<ul class="gnb ">
-						<li><a href="/myproject/kellogg/index.html#Brand">Brand &amp; Products</a></li>
-						<li><a href="/myproject/kellogg/index.html#Cereal">Cereal &amp; Nutrition</a></li>
-						<li><a href="/myproject/kellogg/better_days.html">Better Days</a></li>
-						<!-- 2dpth 있을 경우  a태그에 class="k_icon" 추가 하고 a태그 다음 ul만 추가 해주면됨. -->
-						<li><a href="/myproject/kellogg/about_kellogg.html" class="k_icon">About Kellogg's</a>
-							<ul>
-								<li><a href="/myproject/kellogg/about_kellogg.html">회사소개</a></li>
-								<li><a href="#">켈로그의 약속</a></li>
-								<li><a href="#">켈로그의 가치</a></li>
-								<li><a href="#">인재 채용</a></li>
-								<li><a href="/myproject/kellogg/about_history.html">찾아오시는 길</a></li>
-								<!-- <li><a href="#">FAQ</a></li> -->
-							</ul>
-						</li>
-					</ul>
-				</div>
+					<div class="custom_scroll_content">
+						<ul class="gnb ">
+							<li><a href="/myproject/kellogg/index.html#Brand">Brand &amp; Products</a>
+								<ul>
+									<li><a href="/myproject/kellogg/about_kellogg.html">회사소개</a></li>
+									<li><a href="#">켈로그의 약속</a></li>
+									<li><a href="#">켈로그의 가치</a></li>
+									<li><a href="#">인재 채용</a></li>
+									<li><a href="/myproject/kellogg/about_history.html">찾아오시는 길</a></li>
+									<!-- <li><a href="#">FAQ</a></li> -->
+								</ul>
+							</li>
+							<li><a href="/myproject/kellogg/index.html#Cereal">Cereal &amp; Nutrition</a></li>
+							<li><a href="/myproject/kellogg/better_days.html">Better Days</a></li>
+							<!-- 2dpth 있을 경우  a태그에 class="k_icon" 추가 하고 a태그 다음 ul만 추가 해주면됨. -->
+							<li><a href="/myproject/kellogg/about_kellogg.html" class="k_icon">About Kellogg's</a>
+								<ul>
+									<li><a href="/myproject/kellogg/about_kellogg.html">회사소개</a></li>
+									<li><a href="#">켈로그의 약속</a></li>
+									<li><a href="#">켈로그의 가치</a></li>
+									<li><a href="#">인재 채용</a></li>
+									<li><a href="/myproject/kellogg/about_history.html">찾아오시는 길</a></li>
+									<!-- <li><a href="#">FAQ</a></li> -->
+								</ul>
+							</li>
+						</ul>
+					</div>
 				</div>
 				<ul class="menu_sns">
 					<li><a href="#"><img src="/myproject/assets/image/common/sns.png" alt="sns"></a></li>
@@ -125,7 +133,7 @@
 	</div><!--E: container -->
 	
 	<footer id="footer">
-		
+		<div class="more">MORE</div>
 	</footer><!--E: footer -->
 		
 </div>

@@ -47,7 +47,7 @@ body, button, input, select, table, textarea {font-family:KelloggsSans, 'Noto Sa
 #header h1 a img {width:100%;display:block;}
 
 #header .menu_open {position:absolute;top:24px;right:20px;overflow:hidden;display:inline-block;}
-#header .menu_close {position:absolute;top:24px;right:20px;}
+#header .menu_close {position:absolute;top:24px;right:20px;z-index:100}
 
 #header #menu_aside {position:fixed;top:0;right:0;width:285px;background-color:#eaecef;z-index:9999;
     -webkit-transform: translate(100%,0);
@@ -56,7 +56,7 @@ body, button, input, select, table, textarea {font-family:KelloggsSans, 'Noto Sa
     -o-transform: translate(100%,0);
     transform: translate(100%,0);
 }
-.gnb_area {height:100vh;background-color:#fff;}
+.gnb_area {position:relative;height:100vh;background-color:#fff;z-index:99}
 .isMobile #header #menu_aside.active {
 	-webkit-transition: all 0.2s;
     -moz-transition: all 0.2s;
@@ -69,9 +69,8 @@ body, button, input, select, table, textarea {font-family:KelloggsSans, 'Noto Sa
     -o-transform: translate(0,0);
     transform: translate(0,0);
 }
-#header #menu_aside .gnb_inner {position:relative;padding-top:60px;}
+#header #menu_aside .gnb_inner {position:relative;}
 #header #menu_aside ul.gnb {display:flex;flex-direction:column;justify-content:center;background-color:#fff;}
-/* #header #menu_aside ul.gnb {padding:60px 0 0 0;} */
 #header #menu_aside ul.gnb > li a {display:inline-block;padding:11px 16px;font-size:1.8rem;line-height:2.3rem;font-weight:700;color:#3e3e3e;}
 #header #menu_aside ul.gnb > li a.k_icon::after {content:'';position:absolute;right:0;bottom:50%;width:8px;height:8px;border-top:1px solid #c20f2f;border-left:1px solid #c20f2f;-webkit-transform:rotate(-135deg);transform:rotate(-135deg);}
 #header #menu_aside ul.gnb > li a.k_icon.active::after {content:'';position:absolute;right:0;top:50%;width:8px;height:8px;margin-top:-3px;border-top:1px solid #c20f2f;border-left:1px solid #c20f2f;-webkit-transform:rotate(45deg);transform:rotate(45deg);}
@@ -79,10 +78,15 @@ body, button, input, select, table, textarea {font-family:KelloggsSans, 'Noto Sa
 #header #menu_aside ul.gnb > li ul {display:none;background-color:#fffce9;}
 #header #menu_aside ul.gnb > li ul li a {font-size:1.6rem;font-weight:400;}
 #header #menu_aside ul.gnb > li ul li.current a {color:#c20f2f;}
-#header #menu_aside ul.menu_sns {position:absolute;left:16px;bottom:20px;}
-.pane {position:absolute;width:5px;right:6px;top:0;bottom:0;z-index:10;-webkit-transition:2s;-moz-transition:.2s;-o-transition:.2s;transition:.2s;}
-.pane > .pane_slider {position:relative;margin:0 1px;padding:5px 0;-webkit-box-sizing:border-box;-moz-box-sizing:border-box;box-sizing:border-box;}
-.pane > .pane_slider::after {content:'';display:block;width:100%;height:100%;background:rgba(255,255,255,.6);}
+#header #menu_aside ul.menu_sns {position:absolute;left:0;bottom:0;width:100%;}
+#header #menu_aside ul.menu_sns li {padding:20px 16px;}
+#header #menu_aside ul.menu_sns li a {display:inline-block;}
+
+/* mobile/tablet gnb in scroll */
+.isMobile .custom_scroll_content {position:absolute;overflow:scroll;overflow-x:hidden;top:60px;right:0;bottom:0;left:0;z-index:9;}
+.isMobile .pane {position:absolute;width:5px;right:6px;top:0;bottom:0;z-index:10;-webkit-transition:.2s;-moz-transition:.2s;-o-transition:.2s;transition:.2s;}
+.isMobile .pane .slider {position:relative;margin:0 1px;padding:5px 0;-webkit-box-sizing: border-box;-moz-box-sizing: border-box;box-sizing: border-box;}
+.isMobile .pane .slider::after {content:'';display:block;width:100%;height:100%;background:rgba(255,255,255,.6)}
 
 /* container */
 #container {position:relative;width:100%;background-color:#fbfbfb;}
@@ -124,7 +128,6 @@ body, button, input, select, table, textarea {font-family:KelloggsSans, 'Noto Sa
 	    transform: translate(0,0);
 	    z-index:998;
 	}
-	#header #menu_aside .gnb_inner {padding-top:0;}
 	#header #menu_aside ul.gnb {flex-direction:row;align-items:center;justify-content:space-between;/* padding:0 */}
 	#header #menu_aside ul.gnb > li {position:relative;}
 	#header #menu_aside ul.gnb > li > a {height:80px;display:flex;align-items:center;}
@@ -145,6 +148,7 @@ body, button, input, select, table, textarea {font-family:KelloggsSans, 'Noto Sa
 	.sec_main .mainbg {height:720px;}
 	.sec_main .mainbg_1 {background:url(/myproject/assets/image/common/main1.png) no-repeat center top;}
 	.sec_main .mainbg_2 {background:url(/myproject/assets/image/common/main2.png) no-repeat center top;}
+	.more {font-size:1.6rem;font-weight:700;padding:200px;line-height:1.4rem;}
 }
 
 
