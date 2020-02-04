@@ -6,40 +6,40 @@
 @font-face {
 	font-family: KelloggsSans;
 	src: local(KelloggsSans-Light),
-	url(/myproject/assets/font/KelloggsSans-Light.woff) format('woff'),
-    url(/myproject/assets/font/KelloggsSans-Light.otf) format('truetype');
+	url(../font/KelloggsSans-Light.woff) format('woff'),
+    url(../font/KelloggsSans-Light.otf) format('truetype');
   	font-weight: 300;
   	font-style: normal;
 }
 @font-face {
 	font-family: KelloggsSans;
 	src: local(KelloggsSans-Regular),
-	url(/myproject/assets/font/KelloggsSans-Regular.woff) format('woff'),
-    url(/myproject/assets/font/KelloggsSans-Regular.otf) format('truetype');
+	url(../font/KelloggsSans-Regular.woff) format('woff'),
+    url(../font/KelloggsSans-Regular.otf) format('truetype');
   	font-weight: 400;
   	font-style: normal;
 }
 @font-face {
 	font-family: KelloggsSans;
 	src: local(KelloggsSans-Medium),
-	url(/myproject/assets/font/KelloggsSans-Medium.woff) format('woff'),
-    url(/myproject/assets/font/KelloggsSans-Medium.otf) format('truetype');
+	url(../font/KelloggsSans-Medium.woff) format('woff'),
+    url(../font/KelloggsSans-Medium.otf) format('truetype');
   	font-weight: 500;
   	font-style: normal;
 }
 @font-face {
 	font-family: KelloggsSans;
 	src: local(KelloggsSans-Bold),
-	url(/myproject/assets/font/KelloggsSans-Bold.woff) format('woff'),
-    url(/myproject/assets/font/KelloggsSans-Bold.otf) format('truetype');
+	url(../font/KelloggsSans-Bold.woff) format('woff'),
+    url(../font/KelloggsSans-Bold.otf) format('truetype');
   	font-weight:700;
   	font-style:normal;
 }
 @font-face {
 	font-family: KelloggsHandwritten-Regular;
 	src: local(KelloggsHandwritten-Regular),
-	url(/myproject/assets/font/KelloggsHandwritten-Regular.woff) format('woff'),
-    url(/myproject/assets/font/KelloggsHandwritten-Regular.otf) format('truetype');
+	url(../font/KelloggsHandwritten-Regular.woff) format('woff'),
+    url(../font/KelloggsHandwritten-Regular.otf) format('truetype');
   	font-weight: normal;
   	font-style: normal;
 }
@@ -48,24 +48,24 @@
 @font-face {
 	font-family: KelloggsSans-Italic;
 	src: local(KelloggsSans-LightItalic),
-	url(/myproject/assets/font/KelloggsSans-LightItalic.woff) format('woff'),
-    url(/myproject/assets/font/KelloggsSans-LightItalic.otf) format('truetype');
+	url(../font/KelloggsSans-LightItalic.woff) format('woff'),
+    url(../font/KelloggsSans-LightItalic.otf) format('truetype');
   	font-weight: 300;
   	font-style: italic;
 }
 @font-face {
 	font-family: KelloggsSans-Italic;
 	src: local(KelloggsSans-MediumItalic),
-	url(/myproject/assets/font/KelloggsSans-MediumItalic.woff) format('woff'),
-    url(/myproject/assets/font/KelloggsSans-MediumItalic.otf) format('truetype');
+	url(../font/KelloggsSans-MediumItalic.woff) format('woff'),
+    url(../font/KelloggsSans-MediumItalic.otf) format('truetype');
   	font-weight: 500;
   	font-style: italic;
 }
 @font-face {
 	font-family: KelloggsSans-Italic;
 	src: local(KelloggsSans-BoldItalic),
-	url(/myproject/assets/font/KelloggsSans-BoldItalic.woff) format('woff'),
-    url(/myproject/assets/font/KelloggsSans-BoldItalic.otf) format('truetype');
+	url(../font/KelloggsSans-BoldItalic.woff) format('woff'),
+    url(../font/KelloggsSans-BoldItalic.otf) format('truetype');
   	font-weight: 700;
   	font-style: italic;
 }

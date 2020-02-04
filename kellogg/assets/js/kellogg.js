@@ -27,21 +27,16 @@ var CommonJs = (function(){
         	$.each(swiperTarget, function (i, target) {
         		var swiperOption = {
         			speed : 600,
-        			loop: true,
+        			loop: false,
         			navigation: {
         				nextEl: '.swiper-button-next',
         		        prevEl: '.swiper-button-prev',
         			},
-        			autoplay: {
-        		        delay: 4000,
-        		        disableOnInteraction: false,
-        			}
-        		}
-        		if (i == 0) {
-        			swiperOption["pagination"] = {
-        				el: '.swiper-pagination',
-        				clickable: true
-        			}
+        			autoplay: false,
+        			simulateTouch: false,
+        			followFinger: false,
+        			shortSwipes: false,
+        			longSwipes: false
         		}
         		swiper = new Swiper(target, swiperOption);
         	});
@@ -49,7 +44,7 @@ var CommonJs = (function(){
         	/***************************
         	* Activate current page *
         	***************************/
-        	var k_$title = $('.area_index_title h3').text(),
+        	/*var k_$title = $('.area_index_title h3').text(),
         		k_$nav = $('.gnb a:contains("'+k_$title+'")'),
         		k_$depth1 = k_$nav.parent(),
         		k_$depth2 = k_$nav.parent().parent().prev();
@@ -60,7 +55,7 @@ var CommonJs = (function(){
         		k_$depth2.parent().addClass('current');
         	} else {
         		k_$depth1.addClass('current');
-        	}
+        	}*/
         	
         }
 	}

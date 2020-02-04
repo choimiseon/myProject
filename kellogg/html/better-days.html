@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="ko" id="no-fouc">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<!-- <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no"> -->
+	<meta http-equiv="Content-Script-Type" content="text/javascript">
+	<meta http-equiv="Content-Style-Type" content="text/css">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="format-detection" content="telephone=no">
+	
+	<link rel="canonical" href="https://www.kellogg.co.kr/ko_KR/home.html">
+	<meta name="author" content="kellogg">
+    <meta name="description" content="kellogg">
+    <meta name="keywords" content="kellogg">
+    <!-- Facebook meta tags -->
+    <meta property="og:title" content="농심 켈로그(주)">
+	<meta property="og:url" content="">
+	<meta property="og:image" content="">
+	<meta property="og:description" content="kellogg">
+	<!-- twitter meta tags -->
+	<meta name="twitter:card" content="summary">
+	<meta name="twitter:title" content="농심 켈로그(주)">
+	<meta name="twitter:url" content="">
+	<meta name="twitter:image" content="">
+	<meta name="twitter:description" content="kellogg">
+	
+	<title>Better Days | Kellogg's</title>
+	
+	<link rel="shortcut icon" type="image/x-icon" href="../assets/image/common/favicon.ico">
+	
+	<link rel="stylesheet" href="../assets/css/reset.css">
+	<link rel="stylesheet" href="../assets/css/font.css">
+	<link rel="stylesheet" href="../assets/css/swiper.css">
+	
+	<link rel="stylesheet" href="../assets/css/kellogg.css">
+	
+	<script src="../assets/js/jquery-3.4.1.min.js" charset="utf-8"></script>
+	<script src="../assets/js/jquery.nanoscroller.min.js" charset="utf-8"></script>
+	<script src="../assets/js/swiper.min.js" charset="utf-8"></script>
+</head>
+<body><!-- 메뉴오픈 시 addClass="isMobile" -->
+
+<ul class="skipnav">
+	<li><a href="#gnb">주 메뉴 바로가기</a></li>
+	<li><a href="#container">본문 바로가기</a></li>
+</ul><!--E: skipnav -->
+
+<div id="wrap">
+	<header id="header">
+		<div class="inner_wrap">
+			<h1>
+				<!-- <img srcset="/myproject/assets/image/common/logo_576.png, /myproject/assets/image/common/logo_768.png 1.5x, /myproject/assets/image/common/logo_1280.png 2x" src="/myproject/assets/image/common/logo_1280.png" alt="Kellogg's"> -->
+				<a href="../html/index.html"><img 
+					srcset="../assets/image/common/logo_576.png 576w, 
+					../assets/image/common/logo_768.png 768w, 
+					../assets/image/common/logo_1280.png 1280w"  
+					sizes="(min-width: 1280px) 1280px" 
+					src="../assets/image/common/logo_1280.png" alt="">
+				</a>
+			</h1>
+			<!-- S: mobile/tablet 메뉴 열기 버튼 -->
+			<button type="button" class="button menu_open">
+				<div class="k_icon ham_menu">
+					<i></i>
+					<i></i>
+					<i></i>
+				</div>
+			</button><!-- E: mobile 메뉴 오픈 영역 -->
+			
+			<nav id="menu_aside">
+				<!-- S: mobile/tablet 메뉴 닫기 버튼 -->
+				<button class="button menu_close">
+					<div class="k_icon close_x">
+						<i></i>
+						<i></i>
+					</div>
+				</button><!-- E: mobile/tablet 메뉴 닫기 버튼 -->
+				<div class="gnb_area">
+					<div class="gnb_inner">
+						<div class="custom_scroll_content">
+							<ul class="gnb ">
+								<li><a href="../html/brand-products-list.html">Brand &amp; Products</a></li>
+								<li><a href="../html/cereal-nutrition.html">Cereal &amp; Nutrition</a></li>
+								<li><a href="../html/better-days.html">Better Days</a></li>
+								<!-- 2dpth 있을 경우  a태그에 class="k_icon" 추가 하고 a태그 다음 ul만 추가 해주면됨. -->
+								<li><a href="../html/about-us.html" class="k_icon">About Kellogg's</a>
+									<ul>
+										<li><a href="../html/about-us.html">회사소개</a></li>
+										<li><a href="#">켈로그의 약속</a></li>
+										<li><a href="#">켈로그의 가치</a></li>
+										<li><a href="#" target="_blank" title="켈로그 글로벌 인재채용 사이트롤 새창 링크">인재 채용</a></li>
+										<li><a href="../html/contact-us.html">Contact Us</a></li>
+									</ul>
+								</li>
+							</ul>
+						</div>
+					</div>
+					<ul class="menu_sns">
+						<li><a href="#"><img src="../assets/image/common/sns.png" alt="sns"></a></li>
+					</ul>
+				</div><!-- E: inner_gnb -->
+			</nav>
+		
+		</div><!-- E: inner_wrap  -->
+	</header><!--E: header -->
+	
+	<div id="container" class="betterdays">
+		<div class="area_index_title">
+			<h3>Better Days</h3>
+		</div>
+		<div class="inner_wrap">
+			콘텐츠<br>콘텐츠<br>콘텐츠<br>콘텐츠<br>콘텐츠<br>콘텐츠<br>콘텐츠<br>콘텐츠<br>콘텐츠<br>콘텐츠<br>콘텐츠<br>
+			콘텐츠<br>콘텐츠<br>콘텐츠<br>콘텐츠<br>콘텐츠<br>콘텐츠<br>콘텐츠<br>콘텐츠<br>콘텐츠<br>콘텐츠<br>콘텐츠<br>
+			콘텐츠<br>콘텐츠<br>콘텐츠<br>콘텐츠<br>콘텐츠<br>콘텐츠<br>콘텐츠<br>콘텐츠<br>콘텐츠<br>콘텐츠<br>콘텐츠<br>
+			콘텐츠<br>콘텐츠<br>콘텐츠<br>콘텐츠<br>콘텐츠<br>콘텐츠<br>콘텐츠<br>콘텐츠<br>콘텐츠<br>콘텐츠<br>콘텐츠<br>
+			콘텐츠<br>콘텐츠<br>콘텐츠<br>콘텐츠<br>콘텐츠<br>콘텐츠<br>콘텐츠<br>콘텐츠<br>콘텐츠<br>콘텐츠<br>콘텐츠<br>
+			콘텐츠<br>콘텐츠<br>콘텐츠<br>콘텐츠<br>콘텐츠<br>콘텐츠<br>콘텐츠<br>콘텐츠<br>콘텐츠<br>콘텐츠<br>콘텐츠<br>
+			콘텐츠<br>콘텐츠<br>콘텐츠<br>콘텐츠<br>콘텐츠<br>콘텐츠<br>콘텐츠<br>콘텐츠<br>콘텐츠<br>콘텐츠<br>콘텐츠<br>
+			콘텐츠<br>콘텐츠<br>콘텐츠<br>콘텐츠<br>콘텐츠<br>콘텐츠<br>콘텐츠<br>콘텐츠<br>콘텐츠<br>콘텐츠<br>콘텐츠<br>
+			콘텐츠<br>콘텐츠<br>콘텐츠<br>콘텐츠<br>콘텐츠<br>콘텐츠<br>콘텐츠<br>콘텐츠<br>콘텐츠<br>콘텐츠<br>콘텐츠<br>
+			콘텐츠<br>콘텐츠<br>콘텐츠<br>콘텐츠<br>콘텐츠<br>콘텐츠<br>콘텐츠<br>콘텐츠<br>콘텐츠<br>콘텐츠<br>콘텐츠<br>
+			콘텐츠<br>콘텐츠<br>콘텐츠<br>콘텐츠<br>콘텐츠<br>콘텐츠<br>콘텐츠<br>콘텐츠<br>콘텐츠<br>콘텐츠<br>콘텐츠<br>
+			콘텐츠<br>콘텐츠<br>콘텐츠<br>콘텐츠<br>콘텐츠<br>콘텐츠<br>콘텐츠<br>콘텐츠<br>콘텐츠<br>콘텐츠<br>콘텐츠<br>
+			콘텐츠<br>콘텐츠<br>콘텐츠<br>콘텐츠<br>콘텐츠<br>콘텐츠<br>콘텐츠<br>콘텐츠<br>콘텐츠<br>콘텐츠<br>콘텐츠<br>
+		</div><!-- E: inner_wrap  -->
+		
+	</div><!--E: container -->
+	
+	<footer id="footer">
+		
+	</footer><!--E: footer -->
+		
+</div>
+
+<script src="../assets/js/kellogg.js" charset="utf-8"></script>
+</body>
+</html>
