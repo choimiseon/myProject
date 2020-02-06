@@ -1,0 +1,304 @@
+<!DOCTYPE html>
+<html lang="ko" id="no-fouc">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<!-- <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no"> -->
+	<meta http-equiv="Content-Script-Type" content="text/javascript">
+	<meta http-equiv="Content-Style-Type" content="text/css">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="format-detection" content="telephone=no">
+	
+	<link rel="canonical" href="https://www.kellogg.co.kr/ko_KR/home.html">
+	<meta name="author" content="kellogg">
+    <meta name="description" content="kellogg">
+    <meta name="keywords" content="kellogg">
+    <!-- Facebook meta tags -->
+    <meta property="og:title" content="농심 켈로그(주)">
+	<meta property="og:url" content="">
+	<meta property="og:image" content="">
+	<meta property="og:description" content="kellogg">
+	<!-- twitter meta tags -->
+	<meta name="twitter:card" content="summary">
+	<meta name="twitter:title" content="농심 켈로그(주)">
+	<meta name="twitter:url" content="">
+	<meta name="twitter:image" content="">
+	<meta name="twitter:description" content="kellogg">
+	
+	<title>농심 켈로그(주) | Kellogg's</title>
+	
+	<link rel="shortcut icon" type="image/x-icon" href="../assets/image/common/favicon.ico">
+	
+	<link rel="stylesheet" href="../assets/css/reset.css">
+	<link rel="stylesheet" href="../assets/css/font.css">
+	<link rel="stylesheet" href="../assets/css/swiper.css">
+	
+	<link rel="stylesheet" href="../assets/css/kellogg.css">
+	
+	<script src="../assets/js/jquery-3.4.1.min.js" charset="utf-8"></script>
+	<script src="../assets/js/jquery.nanoscroller.min.js" charset="utf-8"></script>
+	<script src="../assets/js/swiper.min.js" charset="utf-8"></script>
+</head>
+<body><!-- 메뉴오픈 시 addClass="isMobile" -->
+
+<ul class="skipnav">
+	<li><a href="#gnb">주 메뉴 바로가기</a></li>
+	<li><a href="#container">본문 바로가기</a></li>
+</ul><!--E: skipnav -->
+
+<div id="wrap">
+	<header id="header">
+		<div class="inner_wrap">
+			<h1>
+				<a href="../html/index.html"><img 
+					srcset="../assets/image/common/logo_576.png 576w, 
+					../assets/image/common/logo_768.png 768w, 
+					../assets/image/common/logo_1280.png 1280w"  
+					sizes="(min-width: 1280px) 1280px" 
+					src="../assets/image/common/logo_1280.png" alt="kellogg's">
+				</a>
+			</h1>
+			<!-- S: mobile/tablet 메뉴 열기 버튼 -->
+			<button type="button" class="btn btn_type_1 menu_open" title="전체메뉴 열기">
+				<i></i>
+				<i></i>
+				<i></i>
+			</button>
+			<!-- E: mobile 메뉴 오픈 영역 -->
+			
+			<nav id="menu_aside">
+				<!-- S: mobile/tablet 메뉴 닫기 버튼 -->
+				<div class="close_wrap">
+					<button type="button" class="btn btn_type_2 menu_close" title="전체메뉴 닫기">
+						<i></i>
+						<i></i>
+					</button>
+				</div>
+				<!-- E: mobile/tablet 메뉴 닫기 버튼 -->
+				<div class="gnb_area">
+					<div class="gnb_inner">
+						<div class="custom_scroll_content">
+							<ul class="gnb ">
+								<li><a href="../html/brand-products-list.html">Brand &amp; Products</a></li>
+								<li><a href="../html/cereal-nutrition.html">Cereal &amp; Nutrition</a></li>
+								<li><a href="../html/better-days.html">Better Days</a></li>
+								<!-- 2dpth 있을 경우  a태그에 class="btn" 추가 하고 a태그 다음 ul만 추가 해주면됨. -->
+								<li><a href="../html/about-us.html" class="btn">About Kellogg's</a>
+									<ul>
+										<li><a href="../html/about-us.html">회사소개</a></li>
+										<li><a href="#">켈로그의 약속</a></li>
+										<li><a href="#">켈로그의 가치</a></li>
+										<li><a href="#" target="_blank" title="켈로그 글로벌 인재채용 사이트롤 새창 링크">인재 채용</a></li>
+										<li><a href="../html/contact-us.html">Contact Us</a></li>
+									</ul>
+								</li>
+							</ul>
+						</div>
+					</div>
+					
+					<div class="link_biz">
+						<div class="sns">
+							<a href="https://www.youtube.com/channel/UC0Ab7cfFW5CZ6AUbQvkChVw" title="유투브 채널 새창으로 이동" target="_blank" class="youtube"><em class="blind">유투브</em></a>
+							<a href="https://instagram.com/kelloggsnutrition_kr?utm_source=ig_profile_share&igshid=dhk0i3mz74xh" title="인스타그램 새창으로 이동" target="_blank" class="instagram"><em class="blind">인스타그램</em></a>
+							<a href="https://blog.naver.com/kelloggs_kr" title="네이버 블로그 새창으로 이동" target="_blank" class="naver_blog"><em class="blind">네이버 블로그</em></a>
+						</div>
+						<div class="language">
+							<select onchange="if(this.value) location.href=(this.value);">
+								<option value="">Languages</option>
+								<optgroup label="North America">
+							    	<option title="켈로그 미국 영어 사이트로 이동" value="https://www.kelloggs.com/">United States | English</option>
+							    	<option title="켈로그 미국 스페인어 사이트로 이동" value="http://www.diasgrandiosos.com/">United States | Español</option>
+							    	<option title="켈로그 캐나다 영어 사이트로 이동" value="https://www.kelloggs.ca/content/NorthAmerica/kelloggca/en_CA/home.html">Canada | English</option>
+							    	<option title="켈로그 캐나다 프랑스어 사이트로 이동" value="https://www.kelloggs.ca/content/NorthAmerica/kelloggca/fr_CA/home.html">Canada | Français</option>
+							    	<option title="동켈로그 멕시코 스페인어 사이트로 이동" value="https://www.kelloggs.com.mx/">Mexico | Español</option>
+								</optgroup>
+								<optgroup label="Central America">
+							    	<option title="켈로그 과테말라 스페인어 사이트로 이동" value="https://www.kelloggs.com.gt">Guatemala | Español</option>
+								</optgroup>
+								<optgroup label="Latin &amp; South America">
+							    	<option title="켈로그 아르헨티나 스페인어 사이트로 이동" value="https://www.kelloggsargentina.com">Argentina | Español</option>
+							    	<option title="켈로그 브라질 포르투갈어 사이트로 이동" value="https://www.kelloggs.com.br/">Brasil | Português</option>
+									<option title="켈로그 칠레 스페인어 사이트로 이동" value="https://www.kelloggs.cl/">Chile | Español</option>
+									<option title="켈로그 콜롬비아  스페인어 사이트로 이동" value="https://www.kelloggs.com.co/">Colombia | Español</option>
+									<option title="켈로그 에콰도르  스페인어 사이트로 이동" value="https://www.kelloggs.com.ec/">Ecuador | Español</option>
+									<option title="켈로그 파라과이  스페인어 사이트로 이동" value="https://www.kelloggs.com.py/">Paraguay | Español</option>
+									<option title="켈로그 페루 스페인어 사이트로 이동" value="https://www.kelloggs.com.pe/">Peru | Español</option>
+									<option title="켈로그 우루과이  스페인어 사이트로 이동" value="https://www.kelloggsuruguay.com.uy/">Uruguay | Español</option>
+									<option title="켈로그 베네수엘라 스페인어 사이트로 이동" value="https://www.kelloggs.com.ve/">Venezuela | Español</option>
+								</optgroup>
+								<optgroup label="Europe &amp; Middle East">
+							    	<option title="켈로그 벨기 / 벨기에 사이트로 이동" value="https://www.kelloggs.be/nl_BE/home.html">Belgie/Belgique | Nederlands</option>
+							    	<option title="켈로그 벨기 / 프랑스어 사이트로 이동" value="https://www.kelloggs.be/fr_BE/home.html">Belgie/Belgique | Français</option>
+							    	<option title="켈로그 덴마크 독일어 사이트로 이동" value="https://www.kelloggs.dk">Danmark | Dansk</option>
+									<option title="켈로그 독일 독일어 사이트로 이동" value="https://www.kelloggs.de">Deutschland | Deutsch</option>
+									<option title="켈로그 에스파냐 스페인어 사이트로 이동" value="https://www.kelloggs.es/">España | Español</option>
+									<option title="켈로그 프랑스 프랑스어 사이트로 이동" value="https://www.kelloggs.fr/">France | Français</option>
+									<option title="켈로그 그리스 그리스어 사이트로 이동" value="https://www.kelloggs.gr/el_GR/home.html">Ελλάδα/Greece | ελληνική</option>
+									<option title="켈로그 그리스 영어 사이트로 이동" value="https://www.kelloggs.gr/en_GR/home.html">Ελλάδα/Greece | English</option>
+									<option title="켈로그 아일랜드 영어 사이트로 이동" value="https://www.kelloggs.ie/">Ireland | English</option>
+									<option title="켈로그 이탈리아 이탈리아어 사이트로 이동" value="https://www.kelloggs.it">Italia | Italiano</option>
+									<option title="켈로그 네덜란드 네덜란드어 사이트로 이동" value="https://www.kelloggs.nl/nl_NL/home.html">Nederland | Nederlands</option>
+									<option title="켈로그 노르웨이 노르웨이어 사이트로 이동" value="https://www.kelloggs.no">Norge | Norsk</option>
+									<option title="켈로그 오스트리아 독일어 사이트로 이동" value="https://www.kelloggs.at">Österreich | Deutsch</option>
+									<option title="켈로그 포르투갈 포르투갈어 사이트로 이동" value="https://www.kelloggs.pt/">Portugal | Português</option>
+									<option title="켈로그 러시아 러시아어 사이트로 이동" value="https://www.kelloggs.ru/ru_RU/home.html">Россия | Русский</option>
+									<option title="켈로그 스위스 독일어 사이트로이동" value="https://www.kelloggs.de/de_DE/home.html">Schweiz | Deutsch</option>
+									<option title="켈로그 스위스 프랑스어 사이트로 이동" value="https://www.kelloggs.ch/fr_CH/home.html">Suisse | Français</option>
+									<option title="켈로그 핀란드 핀란드어 사이트로 이동" value="https://www.kelloggs.fi">Suomi | Suomi</option>
+									<option title="켈로그 스웨덴  스웨덴어 사이트로 이동" value="https://www.kelloggs.se">Sverige | Svenska</option>
+									<option title="켈로그 터키 터키어 사이트로 이동" value="https://www.kelloggs.com.tr/content/Europe/kelloggs_tr/tr_TR/pages/home.html">Türkiye | Türkçe</option>
+									<option title="켈로그 영국 영어 사이트로 이동" value="https://www.kelloggs.co.uk/">United Kingdom | English</option>
+								</optgroup>
+								<optgroup label="Africa">
+							    	<option title="켈로그 남아프리카 공화국 영어 사이트로 이동" value="https://www.kelloggs.co.za">South Africa | English</option>
+								</optgroup>
+								<optgroup label="Asia">
+							    	<option title="켈로그 일본 일본어 사이트로 이동" value="https://www.kelloggs.jp/">日本 | 日本語</option>
+									<option title="켈로그 대한민국 한국어 사이트로 이동" value="https://www.kellogg.co.kr/">대한민국 | 한국어</option>
+									<option title="켈로그 대만 중국어 번체 사이트로 이동" value="https://www.kelloggs.com.tw/">台灣 | 繁體中文</option>
+									<option title="켈로그 중국 중국어 간체 사이트로 이동" value="https://www.kelloggs.cn/">中国大陆 | 简体中文</option>
+									<option title="켈로그 홍콩 중국어 번체 사이트로 이동" value="https://www.kelloggs.com.hk/">香港 | 繁體中文</option>
+									<option title="켈로그 인도 영어 사이트로 이동" value="https://www.kelloggs.in/">India | English</option>
+								</optgroup>
+								<optgroup label="Oceania">
+							    	<option title="켈로그 호주 영어 사이트로 이동" value="https://www.kelloggs.com.au/">Australia | English</option>
+							    	<option title="켈로그 뉴질랜드 영어 사이트로 이동" value="https://www.kelloggs.co.nz/">New Zealand | English</option>
+								</optgroup>
+							</select>
+						</div>
+					</div>
+					
+				</div><!-- E: inner_gnb -->
+			</nav>
+		
+		</div><!-- E: inner_wrap  -->
+	</header><!--E: header -->
+	
+	<div id="container">
+		<div class="sec_main">
+			<div class="swiper-container">
+				<div class="swiper-wrapper">
+					<div class="swiper-slide">
+						<div class="img m_ver"><img src="../assets/image/main/main1.png" alt="메인이미지"></div>
+						<div class="mainbg mainbg_1"></div>
+						<p>#Seed-to<br>-spoon</p>
+					</div>
+					<div class="swiper-slide">
+						<div class="img m_ver"><img src="../assets/image/main/main2.png" alt="메인이미지"></div>
+						<div class="mainbg mainbg_2"></div>
+					</div>
+					<div class="swiper-slide">
+						<div class="img m_ver"><img src="../assets/image/main/main3.png" alt="메인이미지"></div>
+						<div class="mainbg mainbg_3"></div>
+					</div>
+				</div>
+				<!-- Add Arrows -->
+			    <div class="swiper-button-next"></div>
+			    <div class="swiper-button-prev"></div>
+			</div><!-- E: swiper-container -->
+		</div><!-- E: main -->
+	</div><!--E: container -->
+	
+	<footer id="footer">
+		<a href="#top" class="btn btn_type_3 btn_top"><em class="blind">상단으로 이동</em></a>
+		<div class="info_detail inner_wrap">
+			<div class="widget_list">
+				<a href="#">CONTACT US</a>
+				<i class="bar"></i>
+				<a href="#">SITE MAP</a>
+			</div>
+			<address>
+				안성공장 | 17567 경기도 안성시 공단2로 29 (경기도 안성시 신소현동 142번지)<br>
+				서울본사 | 06235 서울시 강남구 테헤란로 134 15층 (서울 강남구 역삼동 735-3 포스코타워 역삼 15층)
+			</address>
+		</div>
+		<div class="info_base inner_wrap">
+			<div class="logo">
+				<a href="../html/index.html"><img src="../assets/image/common/logo_foot.png" alt="kellogg's"></a>
+			</div>
+			<div class="copyright">&copy; 2019 KELLOGG Co Ltd ALL RIGHT RESERVED.</div>
+			<div class="sns">
+				<a href="https://www.youtube.com/channel/UC0Ab7cfFW5CZ6AUbQvkChVw" title="유투브 채널 새창으로 이동" target="_blank" class="youtube"><em class="blind">유투브</em></a>
+				<a href="https://instagram.com/kelloggsnutrition_kr?utm_source=ig_profile_share&igshid=dhk0i3mz74xh" title="인스타그램 새창으로 이동" target="_blank" class="instagram"><em class="blind">인스타그램</em></a>
+				<a href="https://blog.naver.com/kelloggs_kr" title="네이버 블로그 새창으로 이동" target="_blank" class="naver_blog"><em class="blind">네이버 블로그</em></a>
+			</div>
+			<div class="language">
+				<select onchange="if(this.value) location.href=(this.value);">
+					<option value="">Languages</option>
+					<optgroup label="North America">
+				    	<option title="켈로그 미국 영어 사이트로 이동" value="https://www.kelloggs.com/">United States | English</option>
+				    	<option title="켈로그 미국 스페인어 사이트로 이동" value="http://www.diasgrandiosos.com/">United States | Español</option>
+				    	<option title="켈로그 캐나다 영어 사이트로 이동" value="https://www.kelloggs.ca/content/NorthAmerica/kelloggca/en_CA/home.html">Canada | English</option>
+				    	<option title="켈로그 캐나다 프랑스어 사이트로 이동" value="https://www.kelloggs.ca/content/NorthAmerica/kelloggca/fr_CA/home.html">Canada | Français</option>
+				    	<option title="동켈로그 멕시코 스페인어 사이트로 이동" value="https://www.kelloggs.com.mx/">Mexico | Español</option>
+					</optgroup>
+					<optgroup label="Central America">
+				    	<option title="켈로그 과테말라 스페인어 사이트로 이동" value="https://www.kelloggs.com.gt">Guatemala | Español</option>
+					</optgroup>
+					<optgroup label="Latin &amp; South America">
+				    	<option title="켈로그 아르헨티나 스페인어 사이트로 이동" value="https://www.kelloggsargentina.com">Argentina | Español</option>
+				    	<option title="켈로그 브라질 포르투갈어 사이트로 이동" value="https://www.kelloggs.com.br/">Brasil | Português</option>
+						<option title="켈로그 칠레 스페인어 사이트로 이동" value="https://www.kelloggs.cl/">Chile | Español</option>
+						<option title="켈로그 콜롬비아  스페인어 사이트로 이동" value="https://www.kelloggs.com.co/">Colombia | Español</option>
+						<option title="켈로그 에콰도르  스페인어 사이트로 이동" value="https://www.kelloggs.com.ec/">Ecuador | Español</option>
+						<option title="켈로그 파라과이  스페인어 사이트로 이동" value="https://www.kelloggs.com.py/">Paraguay | Español</option>
+						<option title="켈로그 페루 스페인어 사이트로 이동" value="https://www.kelloggs.com.pe/">Peru | Español</option>
+						<option title="켈로그 우루과이  스페인어 사이트로 이동" value="https://www.kelloggsuruguay.com.uy/">Uruguay | Español</option>
+						<option title="켈로그 베네수엘라 스페인어 사이트로 이동" value="https://www.kelloggs.com.ve/">Venezuela | Español</option>
+					</optgroup>
+					<optgroup label="Europe &amp; Middle East">
+				    	<option title="켈로그 벨기 / 벨기에 사이트로 이동" value="https://www.kelloggs.be/nl_BE/home.html">Belgie/Belgique | Nederlands</option>
+				    	<option title="켈로그 벨기 / 프랑스어 사이트로 이동" value="https://www.kelloggs.be/fr_BE/home.html">Belgie/Belgique | Français</option>
+				    	<option title="켈로그 덴마크 독일어 사이트로 이동" value="https://www.kelloggs.dk">Danmark | Dansk</option>
+						<option title="켈로그 독일 독일어 사이트로 이동" value="https://www.kelloggs.de">Deutschland | Deutsch</option>
+						<option title="켈로그 에스파냐 스페인어 사이트로 이동" value="https://www.kelloggs.es/">España | Español</option>
+						<option title="켈로그 프랑스 프랑스어 사이트로 이동" value="https://www.kelloggs.fr/">France | Français</option>
+						<option title="켈로그 그리스 그리스어 사이트로 이동" value="https://www.kelloggs.gr/el_GR/home.html">Ελλάδα/Greece | ελληνική</option>
+						<option title="켈로그 그리스 영어 사이트로 이동" value="https://www.kelloggs.gr/en_GR/home.html">Ελλάδα/Greece | English</option>
+						<option title="켈로그 아일랜드 영어 사이트로 이동" value="https://www.kelloggs.ie/">Ireland | English</option>
+						<option title="켈로그 이탈리아 이탈리아어 사이트로 이동" value="https://www.kelloggs.it">Italia | Italiano</option>
+						<option title="켈로그 네덜란드 네덜란드어 사이트로 이동" value="https://www.kelloggs.nl/nl_NL/home.html">Nederland | Nederlands</option>
+						<option title="켈로그 노르웨이 노르웨이어 사이트로 이동" value="https://www.kelloggs.no">Norge | Norsk</option>
+						<option title="켈로그 오스트리아 독일어 사이트로 이동" value="https://www.kelloggs.at">Österreich | Deutsch</option>
+						<option title="켈로그 포르투갈 포르투갈어 사이트로 이동" value="https://www.kelloggs.pt/">Portugal | Português</option>
+						<option title="켈로그 러시아 러시아어 사이트로 이동" value="https://www.kelloggs.ru/ru_RU/home.html">Россия | Русский</option>
+						<option title="켈로그 스위스 독일어 사이트로이동" value="https://www.kelloggs.de/de_DE/home.html">Schweiz | Deutsch</option>
+						<option title="켈로그 스위스 프랑스어 사이트로 이동" value="https://www.kelloggs.ch/fr_CH/home.html">Suisse | Français</option>
+						<option title="켈로그 핀란드 핀란드어 사이트로 이동" value="https://www.kelloggs.fi">Suomi | Suomi</option>
+						<option title="켈로그 스웨덴  스웨덴어 사이트로 이동" value="https://www.kelloggs.se">Sverige | Svenska</option>
+						<option title="켈로그 터키 터키어 사이트로 이동" value="https://www.kelloggs.com.tr/content/Europe/kelloggs_tr/tr_TR/pages/home.html">Türkiye | Türkçe</option>
+						<option title="켈로그 영국 영어 사이트로 이동" value="https://www.kelloggs.co.uk/">United Kingdom | English</option>
+					</optgroup>
+					<optgroup label="Africa">
+				    	<option title="켈로그 남아프리카 공화국 영어 사이트로 이동" value="https://www.kelloggs.co.za">South Africa | English</option>
+					</optgroup>
+					<optgroup label="Asia">
+				    	<option title="켈로그 일본 일본어 사이트로 이동" value="https://www.kelloggs.jp/">日本 | 日本語</option>
+						<option title="켈로그 대한민국 한국어 사이트로 이동" value="https://www.kellogg.co.kr/">대한민국 | 한국어</option>
+						<option title="켈로그 대만 중국어 번체 사이트로 이동" value="https://www.kelloggs.com.tw/">台灣 | 繁體中文</option>
+						<option title="켈로그 중국 중국어 간체 사이트로 이동" value="https://www.kelloggs.cn/">中国大陆 | 简体中文</option>
+						<option title="켈로그 홍콩 중국어 번체 사이트로 이동" value="https://www.kelloggs.com.hk/">香港 | 繁體中文</option>
+						<option title="켈로그 인도 영어 사이트로 이동" value="https://www.kelloggs.in/">India | English</option>
+					</optgroup>
+					<optgroup label="Oceania">
+				    	<option title="켈로그 호주 영어 사이트로 이동" value="https://www.kelloggs.com.au/">Australia | English</option>
+				    	<option title="켈로그 뉴질랜드 영어 사이트로 이동" value="https://www.kelloggs.co.nz/">New Zealand | English</option>
+					</optgroup>
+				</select>
+			</div>
+			
+			<div class="btn_info_open">
+				<!-- open 클래스 추가 시 버튼 변경 -->
+				<button type="button" class="btn btn_type_4 foot_open">
+					<i></i>
+					<i></i>
+				</button>
+			</div>
+		</div> <!--E: inner_wrap  -->
+	</footer><!--E: footer -->
+		
+</div>
+
+<script src="../assets/js/kellogg.js" charset="utf-8"></script>
+</body>
+</html>
