@@ -146,7 +146,7 @@ var Interaction = (function(){
             	}
             });
             
-            k_$gnb.height(window.innerHeight - 72);
+            k_$gnb.height(window.innerHeight - ($('.close_wrap').height() + $('.link_biz').height()));
             if(CommonJs.isMobile()) $(".gnb_inner").nanoScroller();
             
         }
