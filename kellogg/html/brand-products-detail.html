@@ -34,6 +34,7 @@
 	<link rel="stylesheet" href="../assets/css/swiper.css">
 	
 	<link rel="stylesheet" href="../assets/css/kellogg.css">
+	<link rel="stylesheet" href="../assets/css/sub_kellogg.css">
 	
 	<script src="../assets/js/jquery-3.4.1.min.js" charset="utf-8"></script>
 	<script src="../assets/js/jquery.nanoscroller.min.js" charset="utf-8"></script>
@@ -50,32 +51,31 @@
 	<header id="header">
 		<div class="inner_wrap">
 			<h1>
-				<!-- <img srcset="/myproject/assets/image/common/logo_576.png, /myproject/assets/image/common/logo_768.png 1.5x, /myproject/assets/image/common/logo_1280.png 2x" src="/myproject/assets/image/common/logo_1280.png" alt="Kellogg's"> -->
 				<a href="../html/index.html"><img 
 					srcset="../assets/image/common/logo_576.png 576w, 
 					../assets/image/common/logo_768.png 768w, 
 					../assets/image/common/logo_1280.png 1280w"  
 					sizes="(min-width: 1280px) 1280px" 
-					src="../assets/image/common/logo_1280.png" alt="">
+					src="../assets/image/common/logo_1280.png" alt="kellogg's">
 				</a>
 			</h1>
 			<!-- S: mobile/tablet 메뉴 열기 버튼 -->
-			<button type="button" class="button menu_open">
-				<div class="k_icon ham_menu">
-					<i></i>
-					<i></i>
-					<i></i>
-				</div>
-			</button><!-- E: mobile 메뉴 오픈 영역 -->
+			<button type="button" class="btn btn_type_1 menu_open" title="전체메뉴 열기">
+				<i></i>
+				<i></i>
+				<i></i>
+			</button>
+			<!-- E: mobile 메뉴 오픈 영역 -->
 			
 			<nav id="menu_aside">
 				<!-- S: mobile/tablet 메뉴 닫기 버튼 -->
-				<button class="button menu_close">
-					<div class="k_icon close_x">
+				<div class="close_wrap">
+					<button type="button" class="btn btn_type_2 menu_close" title="전체메뉴 닫기">
 						<i></i>
 						<i></i>
-					</div>
-				</button><!-- E: mobile/tablet 메뉴 닫기 버튼 -->
+					</button>
+				</div>
+				<!-- E: mobile/tablet 메뉴 닫기 버튼 -->
 				<div class="gnb_area">
 					<div class="gnb_inner">
 						<div class="custom_scroll_content">
@@ -83,8 +83,8 @@
 								<li><a href="../html/brand-products-list.html">Brand &amp; Products</a></li>
 								<li><a href="../html/cereal-nutrition.html">Cereal &amp; Nutrition</a></li>
 								<li><a href="../html/better-days.html">Better Days</a></li>
-								<!-- 2dpth 있을 경우  a태그에 class="k_icon" 추가 하고 a태그 다음 ul만 추가 해주면됨. -->
-								<li><a href="../html/about-us.html" class="k_icon">About Kellogg's</a>
+								<!-- 2dpth 있을 경우  a태그에 class="btn" 추가 하고 a태그 다음 ul만 추가 해주면됨. -->
+								<li><a href="../html/about-us.html" class="btn">About Kellogg's</a>
 									<ul>
 										<li><a href="../html/about-us.html">회사소개</a></li>
 										<li><a href="#">켈로그의 약속</a></li>
@@ -96,9 +96,14 @@
 							</ul>
 						</div>
 					</div>
-					<ul class="menu_sns">
-						<li><a href="#"><img src="../assets/image/common/sns.png" alt="sns"></a></li>
-					</ul>
+					<div class="link_biz">
+						<div class="sns">
+							<a href="https://www.youtube.com/channel/UC0Ab7cfFW5CZ6AUbQvkChVw" title="유투브 채널 새창으로 이동" target="_blank" class="youtube"><em class="blind">유투브</em></a>
+							<a href="https://instagram.com/kelloggsnutrition_kr?utm_source=ig_profile_share&igshid=dhk0i3mz74xh" title="인스타그램 새창으로 이동" target="_blank" class="instagram"><em class="blind">인스타그램</em></a>
+							<a href="https://blog.naver.com/kelloggs_kr" title="네이버 블로그 새창으로 이동" target="_blank" class="naver_blog"><em class="blind">네이버 블로그</em></a>
+						</div>
+						<div class="language"></div>
+					</div>
 				</div><!-- E: inner_gnb -->
 			</nav>
 		
@@ -106,33 +111,284 @@
 	</header><!--E: header -->
 	
 	<div id="container" class="products">
-		<div class="area_index_title">
-			<h3>Brand &amp; <span>Products</span></h3>
-		</div>
-		<div class="inner_wrap">
-			콘텐츠<br>콘텐츠<br>콘텐츠<br>콘텐츠<br>콘텐츠<br>콘텐츠<br>콘텐츠<br>콘텐츠<br>콘텐츠<br>콘텐츠<br>콘텐츠<br>
-			콘텐츠<br>콘텐츠<br>콘텐츠<br>콘텐츠<br>콘텐츠<br>콘텐츠<br>콘텐츠<br>콘텐츠<br>콘텐츠<br>콘텐츠<br>콘텐츠<br>
-			콘텐츠<br>콘텐츠<br>콘텐츠<br>콘텐츠<br>콘텐츠<br>콘텐츠<br>콘텐츠<br>콘텐츠<br>콘텐츠<br>콘텐츠<br>콘텐츠<br>
-			콘텐츠<br>콘텐츠<br>콘텐츠<br>콘텐츠<br>콘텐츠<br>콘텐츠<br>콘텐츠<br>콘텐츠<br>콘텐츠<br>콘텐츠<br>콘텐츠<br>
-			콘텐츠<br>콘텐츠<br>콘텐츠<br>콘텐츠<br>콘텐츠<br>콘텐츠<br>콘텐츠<br>콘텐츠<br>콘텐츠<br>콘텐츠<br>콘텐츠<br>
-			콘텐츠<br>콘텐츠<br>콘텐츠<br>콘텐츠<br>콘텐츠<br>콘텐츠<br>콘텐츠<br>콘텐츠<br>콘텐츠<br>콘텐츠<br>콘텐츠<br>
-			콘텐츠<br>콘텐츠<br>콘텐츠<br>콘텐츠<br>콘텐츠<br>콘텐츠<br>콘텐츠<br>콘텐츠<br>콘텐츠<br>콘텐츠<br>콘텐츠<br>
-			콘텐츠<br>콘텐츠<br>콘텐츠<br>콘텐츠<br>콘텐츠<br>콘텐츠<br>콘텐츠<br>콘텐츠<br>콘텐츠<br>콘텐츠<br>콘텐츠<br>
-			콘텐츠<br>콘텐츠<br>콘텐츠<br>콘텐츠<br>콘텐츠<br>콘텐츠<br>콘텐츠<br>콘텐츠<br>콘텐츠<br>콘텐츠<br>콘텐츠<br>
-			콘텐츠<br>콘텐츠<br>콘텐츠<br>콘텐츠<br>콘텐츠<br>콘텐츠<br>콘텐츠<br>콘텐츠<br>콘텐츠<br>콘텐츠<br>콘텐츠<br>
-			콘텐츠<br>콘텐츠<br>콘텐츠<br>콘텐츠<br>콘텐츠<br>콘텐츠<br>콘텐츠<br>콘텐츠<br>콘텐츠<br>콘텐츠<br>콘텐츠<br>
-			콘텐츠<br>콘텐츠<br>콘텐츠<br>콘텐츠<br>콘텐츠<br>콘텐츠<br>콘텐츠<br>콘텐츠<br>콘텐츠<br>콘텐츠<br>콘텐츠<br>
-			콘텐츠<br>콘텐츠<br>콘텐츠<br>콘텐츠<br>콘텐츠<br>콘텐츠<br>콘텐츠<br>콘텐츠<br>콘텐츠<br>콘텐츠<br>콘텐츠<br>
+		<h3 class="blind">Brand &amp; <span>Products</span></h3>
+		<div class="products_detail_visual"></div>
+		<div class="inner_wrap products_detail"><!-- S: inner_wrap -->
+			<div class="product_detail_summary"><!-- S: product_detail_summary -->
+				<div class="summary_inner">
+					<div class="product_logo"><img src="../assets/image/sub/product_logo.png" alt="키즈 시리얼"><span class="blind">키즈 시리얼</span></div>
+					<div class="product_tit">프로틴 그래놀라 미숫가루큐브 &#38; 검정약콩</div>
+					<div class="info_img"><img src="http://placehold.it/600x600" alt="코코팝스"></div>
+					<div class="product_txt">쌀을 뻥 튀겨 진한 코코아를 입힌 코코팝스는 초콜릿을 좋아하는 아이들은 누구나 좋아하는 초콜릿 맛 시리얼 입니다</div>
+					<div class="product_thumb_detail">
+						<div class="weight">
+							<span class="title">중량</span>
+							<div class="inner">
+								<div>460g</div>
+								<div>750g</div>
+							</div>
+						</div>
+						<div class="end_date">
+							<span class="title">유통기한</span>
+							<div class="inner">
+								<div>12개월</div>
+							</div>
+						</div>
+						<div class="calory">
+							<span class="title">열량</span>
+							<span class="sub_txt">100g당 함량</span>
+							<div class="inner">
+								<div>17kcal</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div><!-- E: product_detail_summary -->
+			<div class="product_detail_wrap cont_inner">
+				<div class="product_detail_inner"><!-- S: product_detail_inner  -->
+					<div class="product_content show_bb">
+						<div class="tit">제품설명</div>
+						<p>초콜릿 맛 시리얼의 원조, 코코 팝스 쌀을 뻥 튀겨 &#40;범프드 라이스&#41; 진한 코코아를 입힌 코코 팝스는 어린이들이 매우 좋아하는 시리얼입니다. 고소한 시리얼에 천연 코코아 분말을 첨가하여 만들었습니다. 바삭바삭 쌀 알갱이 모양의 시리얼 코코 팝스에 우유를 부으면 맛있는 초콜릿 맛 우유로 변합니다.9가지 비타민과 2가지 미네랄&#40;철분, 아연&#41;은 물론, 쌀을 주원료로 하여 쌀이 가진 풍부한 영양을 섭취할 수 있습니다.</p>
+					</div>
+					<div class="product_content show_bb">
+						<div class="tit">원재료명</div>
+						<p>범프드라이스&#40;쌀&#40;수입산&#41;, 설탕, 정제소금&#40;국내산&#41;, 맥아엿, 영양강화제&#41;, 설탕, 코코아분말 4.7%&#40;네덜란드산&#41;, 합성착향료&#40;초콜릿 향&#41;, 혼합제제1 	&#91;분말 비타민 A, 비타민 B1염산염, 비타민 B2, 나이아신 아미드, 비타민 B6염산염, 비타민 C, L-아스코르빈산나트륨, 비타민 D3, 비타민 E, 엽산, 산화아연, 환원철&#93;, 혼합제제2 	&#91;d-토코페롤&#40;혼합형,대두&#41;,글리세린,글리세린지방산에스테르&#41;&#93;</p>
+					</div>
+					<div class="product_content show_bb">
+						<div class="tit">알러지정보</div>
+						<p>알러지 정보가 없습니다.</p>
+					</div>
+					<div class="product_content">
+						<div class="tit">주의사항</div>
+						<p>정보가 없습니다.</p>
+					</div>
+					<div class="nutritional_info">
+						<div>
+							<span>영양 성분표 자세히보기</span>
+							<!-- open 클래스 추가 시 버튼 변경 -->
+							<button type="button" class="btn btn_type_4 nutritional_open">
+								<i></i>
+								<i></i>
+							</button>
+						</div>
+					</div>
+				</div><!-- E: product_detail_inner  -->
+				<div class="nutritional_info_inner"> <!-- S: nutritional_info_inner  --><!-- open 클래스 추가 시 영양 성분표 노출 -->
+					<div class="txt">1회 제공량 1컵 (30g) (1컵 = 200ml기준, 총 25회 제공량 750 /%영양소 기준치 : 1일 영양소 기준치에 대한 비율</div>
+					<table>
+						<colgroup>
+							<col width="30%">
+							<col width="30%">
+							<col width="40%">
+						</colgroup>
+						<thead>
+							<tr>
+								<th>성분</th>
+								<th>1회 제공량당 <span class="line_break">함량</span></th>
+								<th>저지방 우유 200ml<span class="line_break"> &#43;30g시리얼</span></th>
+							</tr>
+						</thead>
+						<tbody>
+							<tr>
+								<td>열량 &#40;kcal&#41;</td>
+								<td>26.4 &#40;8%&#41;</td>
+								<td>196</td>
+							</tr>
+							<tr>
+								<td>탄수화물 &#40;g&#41;</td>
+								<td>12</td>
+								<td>36.4 &#40;11%&#41;</td>
+							</tr>
+							<tr>
+								<td>당류 &#40;g&#41;</td>
+								<td>1.5 &#40;3%&#41;</td>
+								<td>22</td>
+							</tr>
+							<tr>
+								<td>단백질 &#40;g&#41;</td>
+								<td>0.3 &#40;1%&#41;</td>
+								<td>7.5 &#40;14%&#41;</td>
+							</tr>
+							<tr>
+								<td>지방 &#40;g&#41;</td>
+								<td>0.2 &#40;1%&#41;</td>
+								<td>2.3 &#40;5%&#41;</td>
+							</tr>
+							<tr>
+								<td>포화지방 &#40;g&#41;</td>
+								<td>0</td>
+								<td>1.4 &#40;9%&#41;</td>
+							</tr>
+							<tr>
+								<td>트랜스지방 &#40;g&#41;</td>
+								<td>0</td>
+								<td>0</td>
+							</tr>
+							<tr>
+								<td>콜레스테롤 &#40;mg&#41;</td>
+								<td>0 &#40;0%&#41;</td>
+								<td>9 &#40;3%&#41;</td>
+							</tr>
+							<tr>
+								<td>나트륨 &#40;mg&#41;</td>
+								<td>216 &#40;11%&#41;</td>
+								<td>322 &#40;16%&#41;</td>
+							</tr>
+							<tr>
+								<td>비타민A</td>
+								<td>175 &#40;25%&#41;</td>
+								<td>195 &#40;28%&#41;</td>
+							</tr>
+							<tr>
+								<td>비타민B1</td>
+								<td>0.30 &#40;25%&#41;</td>
+								<td>0.38 &#40;32%&#41;</td>
+							</tr>
+							<tr>
+								<td>비타민B2</td>
+								<td>0.35 &#40;25%&#41;</td>
+								<td>0.47 &#40;34%&#41;</td>
+							</tr>
+							<tr>
+								<td>나이아신</td>
+								<td>3.75 &#40;25%&#41;</td>
+								<td>5.35 &#40;36%&#41;</td>
+							</tr>
+							<tr>
+								<td>비타민B6</td>
+								<td>0.38 &#40;25%&#41;</td>
+								<td>0.46 &#40;31%&#41;</td>
+							</tr>
+							<tr>
+								<td>비타민C</td>
+								<td>25 &#40;25%&#41;</td>
+								<td>25 &#40;25%&#41;</td>
+							</tr>
+							<tr>
+								<td>비타민D3</td>
+								<td>1.25 &#40;25%&#41;</td>
+								<td>1.25 &#40;25%&#41;</td>
+							</tr>
+							<tr>
+								<td>비타민E</td>
+								<td>2.75 &#40;25%&#41;</td>
+								<td>2.75 &#40;25%&#41;</td>
+							</tr>
+							<tr>
+								<td>엽산</td>
+								<td>100.0 &#40;25%&#41;</td>
+								<td>100.0 &#40;25%&#41;</td>
+							</tr>
+							<tr>
+								<td>철분</td>
+								<td>1.2 &#40;10%&#41;</td>
+								<td>1.2 &#40;10%&#41;</td>
+							</tr>
+							<tr>
+								<td>아연</td>
+								<td>0.85 &#40;10%&#41;</td>
+								<td>1.7 &#40;19%&#41;</td>
+							</tr>
+							<tr>
+								<td>칼슘</td>
+								<td>0 &#40;0%&#41;</td>
+								<td>262 &#40;37%&#41;</td>
+							</tr>
+						</tbody>
+					</table>
+				</div><!-- E: nutritional_info_inner  -->
+			</div>
+			<div class="similar_product"><!-- S: similar_product  --><!-- [개발]	유사 제품 이미지 노출 영역 -->
+				<div class="similar_wrap">
+					<div class="similar_product_list">
+						<div class="similar_item">
+							<a href="#"><img src="http://placehold.it/220x220" alt="오곡으로 만든 첵스 초코"><span class="product">오곡으로 만든 첵스 초코</span></a>
+						</div>
+						<div class="similar_item">
+							<a href="#"><img src="http://placehold.it/220x220" alt="오곡으로 만든 첵스 초코"><span class="product">오곡으로 만든 첵스 초코</span></a>
+						</div>
+						<div class="similar_item">
+							<a href="#"><img src="http://placehold.it/220x220" alt="오곡으로 만든 첵스 초코"><span class="product">오곡으로 만든 첵스 초코</span></a>
+						</div>
+						<div class="similar_item">
+							<a href="#"><img src="http://placehold.it/220x220" alt="오곡으로 만든 첵스 초코"><span class="product">오곡으로 만든 첵스 초코</span></a>
+						</div>
+						<div class="similar_item">
+							<a href="#"><img src="http://placehold.it/220x220" alt="오곡으로 만든 첵스 초코"><span class="product">오곡으로 만든 첵스 초코</span></a>
+						</div>
+					</div>
+				</div><!-- E: similar_product  -->
+			</div><!-- E: product_detail_summary -->
 		</div><!-- E: inner_wrap  -->
 		
 	</div><!--E: container -->
 	
 	<footer id="footer">
-		
+		<a href="#top" class="btn btn_type_3 btn_top"><em class="blind">상단으로 이동</em></a>
+		<div class="info_detail inner_wrap">
+			<div class="widget_list">
+				<a href="#">CONTACT US</a>
+				<i class="bar"></i>
+				<a href="#">SITE MAP</a>
+			</div>
+			<address>
+				안성공장 | 17567 경기도 안성시 공단2로 29 (경기도 안성시 신소현동 142번지)<br>
+				서울본사 | 06235 서울시 강남구 테헤란로 134 15층 (서울 강남구 역삼동 735-3 포스코타워 역삼 15층)
+			</address>
+		</div>
+		<div class="info_base inner_wrap">
+			<div class="logo">
+				<a href="../html/index.html"><img src="../assets/image/common/logo_foot.png" alt="kellogg's"></a>
+			</div>
+			<div class="copyright">&copy; 2019 KELLOGG Co Ltd ALL RIGHT RESERVED.</div>
+			<div class="sns">
+				<a href="https://www.youtube.com/channel/UC0Ab7cfFW5CZ6AUbQvkChVw" title="유투브 채널 새창으로 이동" target="_blank" class="youtube"><em class="blind">유투브</em></a>
+				<a href="https://instagram.com/kelloggsnutrition_kr?utm_source=ig_profile_share&igshid=dhk0i3mz74xh" title="인스타그램 새창으로 이동" target="_blank" class="instagram"><em class="blind">인스타그램</em></a>
+				<a href="https://blog.naver.com/kelloggs_kr" title="네이버 블로그 새창으로 이동" target="_blank" class="naver_blog"><em class="blind">네이버 블로그</em></a>
+			</div>
+			<div class="language"></div>
+			
+			<div class="btn_info_open">
+				<!-- open 클래스 추가 시 버튼 변경 -->
+				<button type="button" class="btn btn_type_4 foot_open">
+					<i></i>
+					<i></i>
+				</button>
+			</div>
+		</div> <!--E: inner_wrap  -->
 	</footer><!--E: footer -->
 		
 </div>
 
 <script src="../assets/js/kellogg.js" charset="utf-8"></script>
+<script>
+	$(document).ready(function(){
+		$.ajax({ 
+			url: 'products.json', 
+			type: 'GET', 
+			dataType : 'json', 
+			success : function (data) { 
+				k_$params = getUrlParams();
+				var k_$images = data.images,
+					k_$imageContainer = $(".products_detail_visual"),		
+					k_$visual = k_$images.filter(function(images){return images.num == k_$params.num});
+				
+				var k_$strDOM = '<picture>';
+					k_$strDOM += '<source srcset="' + k_$visual[0].desktop + '" media="(min-width: 1180px)" />';
+					k_$strDOM += '<source srcset="' + k_$visual[0].tablet + '" media="(min-width: 768px)" />';
+					k_$strDOM += '<source srcset="' + k_$visual[0].mobile + '" media="(min-width: 360px)" />';
+					k_$strDOM += '<img src="' + k_$visual[0].desktop + '" alt="' + k_$visual[0].title + '" />';
+					k_$strDOM += '</picture>';
+				
+				k_$imageContainer.html(k_$strDOM);
+			} 
+		});
+	});
+	function getUrlParams() {
+	    var params = {};
+	    window.location.search.replace(/[?&]+([^=&]+)=([^&]*)/gi, function(str, key, value) { params[key] = value; });
+	    return params;
+	}
+</script>
 </body>
 </html>

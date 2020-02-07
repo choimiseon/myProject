@@ -68,6 +68,7 @@ var Interaction = (function(){
 	 	k_$menu = k_$header.find('#menu_aside');
 		k_$gnb = k_$header.find('.gnb_inner');
 		
+		
 	function init(){
 		eventListener();
 		resizeEvent();
@@ -102,6 +103,35 @@ var Interaction = (function(){
         		$('.info_base .language').addClass('open');
         	}
         });
+        
+        /***************************
+    	* 제품 검색 텍스트 clear *
+    	***************************/
+        var k_$ipt = $('.searchinput'),
+	    	k_$clearIpt = $('.searchclear');
+        
+		k_$ipt.off().on('keyup',function(e){
+			$(".searchclear").toggle(Boolean($(this).val()));
+		});
+		k_$clearIpt.toggle(Boolean(k_$ipt.val()));
+		k_$clearIpt.off().on('click',function(e){
+		  $(".searchinput").val('').focus();
+		  $(this).hide();
+		});
+		
+		/***************************
+    	* 영양 성분표 자세히보기 *
+    	***************************/
+		$('.nutritional_open').off().on('click',function(e){
+			if($(this).hasClass('open')){
+				$(this).removeClass('open');
+				$('.nutritional_info_inner').removeClass('open');
+			} else {
+				$(this).addClass('open');
+				$('.nutritional_info_inner').addClass('open');
+			}
+			
+		})
         
 	}
 	

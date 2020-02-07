@@ -118,7 +118,7 @@ button{margin:0;padding:0;background:none;border:none;cursor:pointer;}
 #footer {position:relative;background-color:#d20b2f;color:#fff;padding:0 20px;}
 #footer a {color:#fff;}
 #footer .btn_top {display:none;}
-#footer .inner_wrap {}
+#footer .inner_wrap {position:static;}
 #footer .info_detail {display:none;flex-direction:column;align-items:flex-start;padding:20px 0;border-bottom:1px solid #fff;font-size:1.4rem;line-height:22px;}
 #footer .info_detail.open {display:flex;}
 #footer .info_detail .widget_list {flex:1;display:flex;align-items:center;}
