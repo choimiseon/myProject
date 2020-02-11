@@ -22,12 +22,12 @@ var CommonJs = (function(){
         	/***************************
         	* main slider *
         	***************************/
-        	var swiperTarget = [".sec_main .swiper-container"];
+        	var swiperTarget = [".sec_visual .swiper-container"];
         	var swiper;
         	$.each(swiperTarget, function (i, target) {
         		var swiperOption = {
         			speed : 600,
-        			loop: false,
+        			loop: true,
         			navigation: {
         				nextEl: '.swiper-button-next',
         		        prevEl: '.swiper-button-prev',
@@ -61,7 +61,7 @@ var CommonJs = (function(){
 	}
 
 })();
-
+CommonJs.init();
 var Interaction = (function(){
 	var k_$wrap = $('#wrap'),
 		k_$header = $('#header'),
@@ -136,7 +136,6 @@ var Interaction = (function(){
 	}
 	
 	function resizeEvent(){
-		CommonJs.init();
 		if(CommonJs.isMobile() == false){ // desktop
         	$('.gnb_inner').height('80');
         	closeLnb();
