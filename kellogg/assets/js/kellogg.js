@@ -2,7 +2,7 @@
 var CommonJs = (function(){
 	return{
 		isMobile:function(){
-			var userSize = $(window).innerWidth();
+			var userSize = $(window).outerWidth();
 			if (userSize <= 1179){
                 return true;
             }else{
@@ -61,7 +61,7 @@ var CommonJs = (function(){
 	}
 
 })();
-CommonJs.init();
+
 var Interaction = (function(){
 	var k_$wrap = $('#wrap'),
 		k_$header = $('#header'),
@@ -74,6 +74,7 @@ var Interaction = (function(){
 		resizeEvent();
 		$(window).resize(resizeEvent);
 		$(window).scroll(scrollEvent);
+		accordion();
 		language();
 	}
 	
@@ -136,6 +137,7 @@ var Interaction = (function(){
 	}
 	
 	function resizeEvent(){
+		CommonJs.init();
 		if(CommonJs.isMobile() == false){ // desktop
         	$('.gnb_inner').height('80');
         	closeLnb();
@@ -184,14 +186,14 @@ var Interaction = (function(){
 	/***************************
 	* menu reset *
 	***************************/
-	function closeLnb(){
+	function closeLnb() {
 		k_$menu.removeClass('active');
 		k_$menu.find('.gnb li > a').removeClass('active');
 		k_$menu.find('.gnb li > ul').stop().css({'display':'none'});
 		$('body').removeClass('isMobile').removeClass('dim');
 	}
 	
-	function scrollEvent(){
+	function scrollEvent() {
 		var k_$wTop = $(window).scrollTop(),
 			k_$headerHeight = k_$header.height(),
 			topHalf = (k_$wrap.height() / 2) - ($(window).height() / 2) - k_$header.height(),
@@ -214,7 +216,22 @@ var Interaction = (function(){
 		
 	}
 	
-	function language(){
+	/* accordion common */
+	function accordion() {
+		$('.accordion_list dt').off().on('click',function(){
+            if($(this).hasClass('active')){
+            	$('.accordion_list dt').removeClass('active');
+            	$('.accordion_list dd').stop().slideUp(100);
+            }else{
+            	$('.accordion_list dt').removeClass('active');
+            	$('.accordion_list dd').stop().slideUp(100);
+                $(this).addClass('active');
+                $(this).next('dd').stop().slideDown(100);
+            }
+        });
+	}
+	
+	function language() {
 		$('.language').html('<select onchange="if(this.value) location.href=(this.value);"><option value="">Languages</option><optgroup label="North America"><option title="켈로그 미국 영어 사이트로 이동" value="https://www.kelloggs.com/">United States | English</option><option title="켈로그 미국 스페인어 사이트로 이동" value="http://www.diasgrandiosos.com/">United States | Español</option><option title="켈로그 캐나다 영어 사이트로 이동" value="https://www.kelloggs.ca/content/NorthAmerica/kelloggca/en_CA/home.html">Canada | English</option><option title="켈로그 캐나다 프랑스어 사이트로 이동" value="https://www.kelloggs.ca/content/NorthAmerica/kelloggca/fr_CA/home.html">Canada | Français</option><option title="동켈로그 멕시코 스페인어 사이트로 이동" value="https://www.kelloggs.com.mx/">Mexico | Español</option></optgroup><optgroup label="Central America"><option title="켈로그 과테말라 스페인어 사이트로 이동" value="https://www.kelloggs.com.gt">Guatemala | Español</option></optgroup><optgroup label="Latin &amp; South America"><option title="켈로그 아르헨티나 스페인어 사이트로 이동" value="https://www.kelloggsargentina.com">Argentina | Español</option><option title="켈로그 브라질 포르투갈어 사이트로 이동" value="https://www.kelloggs.com.br/">Brasil | Português</option><option title="켈로그 칠레 스페인어 사이트로 이동" value="https://www.kelloggs.cl/">Chile | Español</option><option title="켈로그 콜롬비아  스페인어 사이트로 이동" value="https://www.kelloggs.com.co/">Colombia | Español</option><option title="켈로그 에콰도르  스페인어 사이트로 이동" value="https://www.kelloggs.com.ec/">Ecuador | Español</option><option title="켈로그 파라과이  스페인어 사이트로 이동" value="https://www.kelloggs.com.py/">Paraguay | Español</option><option title="켈로그 페루 스페인어 사이트로 이동" value="https://www.kelloggs.com.pe/">Peru | Español</option><option title="켈로그 우루과이  스페인어 사이트로 이동" value="https://www.kelloggsuruguay.com.uy/">Uruguay | Español</option><option title="켈로그 베네수엘라 스페인어 사이트로 이동" value="https://www.kelloggs.com.ve/">Venezuela | Español</option></optgroup><optgroup label="Europe &amp; Middle East"><option title="켈로그 벨기 / 벨기에 사이트로 이동" value="https://www.kelloggs.be/nl_BE/home.html">Belgie/Belgique | Nederlands</option><option title="켈로그 벨기 / 프랑스어 사이트로 이동" value="https://www.kelloggs.be/fr_BE/home.html">Belgie/Belgique | Français</option><option title="켈로그 덴마크 독일어 사이트로 이동" value="https://www.kelloggs.dk">Danmark | Dansk</option><option title="켈로그 독일 독일어 사이트로 이동" value="https://www.kelloggs.de">Deutschland | Deutsch</option><option title="켈로그 에스파냐 스페인어 사이트로 이동" value="https://www.kelloggs.es/">España | Español</option><option title="켈로그 프랑스 프랑스어 사이트로 이동" value="https://www.kelloggs.fr/">France | Français</option><option title="켈로그 그리스 그리스어 사이트로 이동" value="https://www.kelloggs.gr/el_GR/home.html">Ελλάδα/Greece | ελληνική</option><option title="켈로그 그리스 영어 사이트로 이동" value="https://www.kelloggs.gr/en_GR/home.html">Ελλάδα/Greece | English</option><option title="켈로그 아일랜드 영어 사이트로 이동" value="https://www.kelloggs.ie/">Ireland | English</option><option title="켈로그 이탈리아 이탈리아어 사이트로 이동" value="https://www.kelloggs.it">Italia | Italiano</option><option title="켈로그 네덜란드 네덜란드어 사이트로 이동" value="https://www.kelloggs.nl/nl_NL/home.html">Nederland | Nederlands</option><option title="켈로그 노르웨이 노르웨이어 사이트로 이동" value="https://www.kelloggs.no">Norge | Norsk</option><option title="켈로그 오스트리아 독일어 사이트로 이동" value="https://www.kelloggs.at">Österreich | Deutsch</option><option title="켈로그 포르투갈 포르투갈어 사이트로 이동" value="https://www.kelloggs.pt/">Portugal | Português</option><option title="켈로그 러시아 러시아어 사이트로 이동" value="https://www.kelloggs.ru/ru_RU/home.html">Россия | Русский</option><option title="켈로그 스위스 독일어 사이트로이동" value="https://www.kelloggs.de/de_DE/home.html">Schweiz | Deutsch</option><option title="켈로그 스위스 프랑스어 사이트로 이동" value="https://www.kelloggs.ch/fr_CH/home.html">Suisse | Français</option><option title="켈로그 핀란드 핀란드어 사이트로 이동" value="https://www.kelloggs.fi">Suomi | Suomi</option><option title="켈로그 스웨덴  스웨덴어 사이트로 이동" value="https://www.kelloggs.se">Sverige | Svenska</option><option title="켈로그 터키 터키어 사이트로 이동" value="https://www.kelloggs.com.tr/content/Europe/kelloggs_tr/tr_TR/pages/home.html">Türkiye | Türkçe</option><option title="켈로그 영국 영어 사이트로 이동" value="https://www.kelloggs.co.uk/">United Kingdom | English</option></optgroup><optgroup label="Africa"><option title="켈로그 남아프리카 공화국 영어 사이트로 이동" value="https://www.kelloggs.co.za">South Africa | English</option></optgroup><optgroup label="Asia"><option title="켈로그 일본 일본어 사이트로 이동" value="https://www.kelloggs.jp/">日本 | 日本語</option><option title="켈로그 대한민국 한국어 사이트로 이동" value="https://www.kellogg.co.kr/">대한민국 | 한국어</option><option title="켈로그 대만 중국어 번체 사이트로 이동" value="https://www.kelloggs.com.tw/">台灣 | 繁體中文</option><option title="켈로그 중국 중국어 간체 사이트로 이동" value="https://www.kelloggs.cn/">中国大陆 | 简体中文</option><option title="켈로그 홍콩 중국어 번체 사이트로 이동" value="https://www.kelloggs.com.hk/">香港 | 繁體中文</option><option title="켈로그 인도 영어 사이트로 이동" value="https://www.kelloggs.in/">India | English</option></optgroup><optgroup label="Oceania"><option title="켈로그 호주 영어 사이트로 이동" value="https://www.kelloggs.com.au/">Australia | English</option><option title="켈로그 뉴질랜드 영어 사이트로 이동" value="https://www.kelloggs.co.nz/">New Zealand | English</option></optgroup></select>');
 	}
 	

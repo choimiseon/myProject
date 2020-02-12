@@ -25,7 +25,7 @@
 	<meta name="twitter:image" content="">
 	<meta name="twitter:description" content="kellogg">
 	
-	<title>Cereal &amp; Nutrition | Kellogg's</title>
+	<title>Brand &amp; Products | Kellogg's</title>
 	
 	<link rel="shortcut icon" type="image/x-icon" href="../assets/image/common/favicon.ico">
 	
@@ -34,6 +34,7 @@
 	<link rel="stylesheet" href="../assets/css/swiper.css">
 	
 	<link rel="stylesheet" href="../assets/css/kellogg.css">
+	<link rel="stylesheet" href="../assets/css/sub_kellogg.css">
 	
 	<script src="../assets/js/jquery-3.4.1.min.js" charset="utf-8"></script>
 	<script src="../assets/js/jquery.nanoscroller.min.js" charset="utf-8"></script>
@@ -50,32 +51,31 @@
 	<header id="header">
 		<div class="inner_wrap">
 			<h1>
-				<!-- <img srcset="/myproject/assets/image/common/logo_576.png, /myproject/assets/image/common/logo_768.png 1.5x, /myproject/assets/image/common/logo_1280.png 2x" src="/myproject/assets/image/common/logo_1280.png" alt="Kellogg's"> -->
 				<a href="../html/index.html"><img 
 					srcset="../assets/image/common/logo_576.png 576w, 
 					../assets/image/common/logo_768.png 768w, 
 					../assets/image/common/logo_1280.png 1280w"  
 					sizes="(min-width: 1280px) 1280px" 
-					src="../assets/image/common/logo_1280.png" alt="">
+					src="../assets/image/common/logo_1280.png" alt="kellogg's">
 				</a>
 			</h1>
 			<!-- S: mobile/tablet 메뉴 열기 버튼 -->
-			<button type="button" class="button menu_open">
-				<div class="k_icon ham_menu">
-					<i></i>
-					<i></i>
-					<i></i>
-				</div>
-			</button><!-- E: mobile 메뉴 오픈 영역 -->
+			<button type="button" class="btn btn_type_1 menu_open" title="전체메뉴 열기">
+				<i></i>
+				<i></i>
+				<i></i>
+			</button>
+			<!-- E: mobile 메뉴 오픈 영역 -->
 			
 			<nav id="menu_aside">
 				<!-- S: mobile/tablet 메뉴 닫기 버튼 -->
-				<button class="button menu_close">
-					<div class="k_icon close_x">
+				<div class="close_wrap">
+					<button type="button" class="btn btn_type_2 menu_close" title="전체메뉴 닫기">
 						<i></i>
 						<i></i>
-					</div>
-				</button><!-- E: mobile/tablet 메뉴 닫기 버튼 -->
+					</button>
+				</div>
+				<!-- E: mobile/tablet 메뉴 닫기 버튼 -->
 				<div class="gnb_area">
 					<div class="gnb_inner">
 						<div class="custom_scroll_content">
@@ -83,8 +83,8 @@
 								<li><a href="../html/brand-products-list.html">Brand &amp; Products</a></li>
 								<li><a href="../html/cereal-nutrition.html">Cereal &amp; Nutrition</a></li>
 								<li><a href="../html/better-days.html">Better Days</a></li>
-								<!-- 2dpth 있을 경우  a태그에 class="k_icon" 추가 하고 a태그 다음 ul만 추가 해주면됨. -->
-								<li><a href="../html/about-us.html" class="k_icon">About Kellogg's</a>
+								<!-- 2dpth 있을 경우  a태그에 class="btn" 추가 하고 a태그 다음 ul만 추가 해주면됨. -->
+								<li><a href="../html/about-us.html" class="btn">About Kellogg's</a>
 									<ul>
 										<li><a href="../html/about-us.html">회사소개</a></li>
 										<li><a href="#">켈로그의 약속</a></li>
@@ -96,9 +96,14 @@
 							</ul>
 						</div>
 					</div>
-					<ul class="menu_sns">
-						<li><a href="#"><img src="../assets/image/common/sns.png" alt="sns"></a></li>
-					</ul>
+					<div class="link_biz">
+						<div class="sns">
+							<a href="https://www.youtube.com/channel/UC0Ab7cfFW5CZ6AUbQvkChVw" title="유투브 채널 새창으로 이동" target="_blank" class="youtube"><em class="blind">유투브</em></a>
+							<a href="https://instagram.com/kelloggsnutrition_kr?utm_source=ig_profile_share&igshid=dhk0i3mz74xh" title="인스타그램 새창으로 이동" target="_blank" class="instagram"><em class="blind">인스타그램</em></a>
+							<a href="https://blog.naver.com/kelloggs_kr" title="네이버 블로그 새창으로 이동" target="_blank" class="naver_blog"><em class="blind">네이버 블로그</em></a>
+						</div>
+						<div class="language"></div>
+					</div>
 				</div><!-- E: inner_gnb -->
 			</nav>
 		
@@ -110,19 +115,77 @@
 			<h3>Cereal &amp; Nutrition</h3>
 		</div>
 		<div class="inner_wrap">
-			씨앗에서 식탁까지
-			<ul>
-				<li><a href="cereal-nutrition.html">씨리얼의 영양</a></li>
-				<li><a href="from-seed-to-table.html">씨앗에서 식탁까지</a></li>
+			<div class="inner_title">Cereal &amp; Nutrition</div>
+			<ul class="tab">
+				<li><a href="cereal-nutrition.html">시리얼의 영양</a></li>
+				<li class="on"><a href="from-seed-to-table.html">씨앗에서 식탁까지</a></li>
 				<li><a href="nutritional-benefits-of-grains.html">영양정보 들여다보기</a></li>
-				<li><a href="vitamin-fortification.html">비타민과 무기질</a></li>
+				<li><a href="cereal-innovation.html">시리얼의 혁신</a></li>
 			</ul>
+			<div class="tab_inner_wrap from_seed_wrap type_2"><!-- S: from_seed_wrap -->
+				<div class="sub_title">씨앗에서 식탁까지</div>
+				<ul class="from_seed_info">
+					<li>
+						<img src="../assets/image/sub/from_seed_to_table_img_1.png" alt="씨앗에서 식탁까지 이미지1">
+						<div>
+							<span>&#8220;켈로그가 알려주는 진짜 시리얼에 대한 모든 것&#8221;</span>
+							세계 최대 시리얼 기업인 켈로그는 지난 114년간 쌓아온 깊은 역사와 노하우를 바탕으로 시리얼에 대한 잘못된 인식을 바로잡고자 시리얼이 지닌 간편함을 뛰어넘는 영양적인 가치를 전달하고자 합니다.<br> 
+							켈로그의 &#8216;씨앗에서 식탁까지&#8217;는 엄선한 곡물을 찌고 구워 소비자들의 식탁에 진정한 한끼 식사로 오르기까지 시리얼의 리얼한 여정입니다. 
+						</div>
+					</li>
+					<li>
+						<img src="../assets/image/sub/from_seed_to_table_img_2.png" alt="씨앗에서 식탁까지 이미지2">
+						<div>
+							한 알의 곡물 씨앗을 고르기 위해 농부들과 협력을 하고, 정성이 가득한 한 줌의 곡물을 우리 몸이 필요로 하는 비타민, 미네랄 등 다양한 영양 성분을 담아 다양한 시리얼 제품으로 탄생시키는 과정이지요. 켈로그의 시리얼 제품은 여러분의 주방에서 음식을 조리하는 것과 동일한 방식으로 만들어집니다.<br>
+							단지 그 규모와 양이 조금 더 크다는 것뿐이지요&#33; 
+						</div>
+					</li>
+				</ul>
+				<div class="from_seed_declare bg_area">
+					한 줌의 곡물이 맛있는 식사가 되고, 농장에서 여러분의 식탁으로 전달되기까지 
+					맛있고 건강한 시리얼 한 스푼을 위해 켈로그는 항상 최선의 노력을 다하겠습니다. 
+				</div>
+				<div class="video_cont">
+					<iframe src="https://www.youtube.com/embed/N0dLcTgQMgQ" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+				</div>
+			</div><!-- E: from_seed_wrap -->
 		</div><!-- E: inner_wrap  -->
 		
 	</div><!--E: container -->
 	
 	<footer id="footer">
-		
+		<a href="#top" class="btn btn_type_3 btn_top"><em class="blind">상단으로 이동</em></a>
+		<div class="info_detail inner_wrap">
+			<div class="widget_list">
+				<a href="#">CONTACT US</a>
+				<i class="bar"></i>
+				<a href="#">SITE MAP</a>
+			</div>
+			<address>
+				안성공장 | 17567 경기도 안성시 공단2로 29 (경기도 안성시 신소현동 142번지)<br>
+				서울본사 | 06235 서울시 강남구 테헤란로 134 15층 (서울 강남구 역삼동 735-3 포스코타워 역삼 15층)
+			</address>
+		</div>
+		<div class="info_base inner_wrap">
+			<div class="logo">
+				<a href="../html/index.html"><img src="../assets/image/common/logo_foot.png" alt="kellogg's"></a>
+			</div>
+			<div class="copyright">&copy; 2019 KELLOGG Co Ltd ALL RIGHT RESERVED.</div>
+			<div class="sns">
+				<a href="https://www.youtube.com/channel/UC0Ab7cfFW5CZ6AUbQvkChVw" title="유투브 채널 새창으로 이동" target="_blank" class="youtube"><em class="blind">유투브</em></a>
+				<a href="https://instagram.com/kelloggsnutrition_kr?utm_source=ig_profile_share&igshid=dhk0i3mz74xh" title="인스타그램 새창으로 이동" target="_blank" class="instagram"><em class="blind">인스타그램</em></a>
+				<a href="https://blog.naver.com/kelloggs_kr" title="네이버 블로그 새창으로 이동" target="_blank" class="naver_blog"><em class="blind">네이버 블로그</em></a>
+			</div>
+			<div class="language"></div>
+			
+			<div class="btn_info_open">
+				<!-- open 클래스 추가 시 버튼 변경 -->
+				<button type="button" class="btn btn_type_4 foot_open">
+					<i></i>
+					<i></i>
+				</button>
+			</div>
+		</div> <!--E: inner_wrap  -->
 	</footer><!--E: footer -->
 		
 </div>

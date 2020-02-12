@@ -4,11 +4,14 @@
 button { margin: 0; padding: 0; background: none; border: none; cursor: pointer; outline: 0; }
 img { max-width:100%; display: block;}
 .line_break {display:block;}
-
+.dot_type_1:before { content: ' \2022'; padding-right:5px; }
 
 /* container */
 .inner_wrap {position:relative;}
 .cont_inner { padding:0 20px; }
+.tab_inner_wrap { padding:31px 0 60px; }
+.tab_inner_wrap.type_2 { padding:31px 20px 60px; }
+#container .sub_title { font-size: 2.0rem; font-weight: bold; line-height: 1.4; color: #1c2e3d; text-align: center; padding-bottom: 35px;}
 
 /* brand-products-list */
 
@@ -23,81 +26,173 @@ img { max-width:100%; display: block;}
 .products .search_area { padding: 30px 20px 22px; background-color: #fff; border-bottom: 1px solid #d5d5d5; }
 .products .search_area .search_box { border: 2px solid #d20b2f; padding: 7px 7px 7px 13px; }
 .products .search_area .search_box form { display: flex; align-items: center; flex-wrap:nowrap; }
-.products .search_area .search_box .input_text { flex-grow:1; flex-shrink: 1; border: 0; background: #fff; font-size: 14px; line-height: 1.6; padding: 0; }
+.products .search_area .search_box .input_text { flex-grow:1; flex-shrink: 1; border: 0; background: #fff; font-size: 1.4rem; line-height: 1.6; padding: 0; }
 .products .search_area .search_box input::placeholder { color:#2b292d; opacity:0.4; }
 
 .products .search_area .search_keword { margin-top:14px; }
-.products .search_area .search_keword .title { font-size: 14px;font-weight: bold;line-height:1.6;}
+.products .search_area .search_keword .title { font-size: 1.4rem;font-weight: bold;line-height:1.6;}
 .products .search_area .search_keword .keword_list .list_inner { margin-top:12px; display:flex; flex-wrap: wrap; }
-.products .search_area .search_keword .keword_list .list_inner > div { margin: 0 10px 10px 0;padding:7px 14px 7px 14px; border-radius:15px; border:1px solid #d5d5d5; background-color:#fff;font-size:14px; line-height:1; cursor:pointer; }
-.products .search_result_wrap { background-color:#fff; padding:24px 0 103px; }
-.products .search_result_wrap .title { display:inline-block;margin-left:4px;font-size:18px;line-height:1.6; color:#2c3241; }
-.products .search_result_wrap .data_count{ display:inline-block; margin-left:6px; color:#3e3e3e; opacity:0.5; font-size:14px; line-height:1.6; }
+.products .search_area .search_keword .keword_list .list_inner > div { margin: 0 10px 10px 0;padding:4px 16px 5px 16px; border-radius:15px; border:1px solid #d5d5d5; background-color:#fff;font-size: 1.4rem; line-height:1; cursor:pointer; }
+.products .search_result_wrap { background-color:#fff; padding:24px 0 60px; }
+.products .search_result_wrap .title { display:inline-block;margin-left:4px;font-size: 1.8rem;line-height:1.6; color:#2c3241; }
+.products .search_result_wrap .data_count{ display:inline-block; margin-left:6px; color:#3e3e3e; opacity:0.5; font-size: 1.4rem; line-height:1.6; }
 .products .product_list{margin-top:31px;display: flex;flex-wrap: wrap; justify-content: space-between;}
-.products .product_list > div.product_item {width: calc( 100%/2 - 10px );}
-.products .product_list > div.product_item a { position:relative; }
-.products .product_list > div.product_item a span.product { display:block; font-size:16px; line-height:1.6; text-align:center; margin:7px 0 20px; }
-.products .product_list > div.product_item:last-child a span.product { margin:7px 0 0; }
-.products .product_list > div.product_item a span.new { display: block;position: absolute;top:0;left:0;width:40px; height:40px;text-align:center; content:"";background-color:#d20b2f }
-.products .product_list > div.product_item a span.new span { position: relative; display: block; width:40px; height:40px;line-height:40px;font-weight:bold;font-style: italic;font-size: 12px; color: #fff; z-index: 20; }
+.products .product_list > .product_item {width: calc( 100%/2 - 10px );}
+.products .product_list > .product_item:not(:last-child) { margin-bottom:20px; }
+.products .product_list > .product_item a { position:relative;display:block; font-size: 1.6rem; line-height:1.6; text-align:center; }
+.products .product_list > .product_item a img { margin-bottom:10px; }
+.products .product_list > .product_item a span.new { display: block;position: absolute;top:0;left:0;width:40px; height:40px;text-align:center; content:"";background-color:#d20b2f }
+.products .product_list > .product_item a span.new span { position: relative; display: block; width:40px; height:40px;line-height:40px;font-weight:bold;font-style: italic;font-size: 1.2rem;; color: #fff; z-index: 20; }
 
 /* brand-products-detail */
 
 /************** 영양 성분표 펼침 아이콘 **************/
-.products .products_detail_visual {width:100%;}
-.products .products_detail_visual img {display:block;width:100%;}
-.products .inner_wrap.products_detail .product_detail_inner .nutritional_info .btn_type_4 { display:inline-block;position:relative; top: 0; margin-left: 10px; left: 0;}
-
+.products .inner_wrap.products_detail .product_detail_inner .nutritional_info .btn_type_4 { display:inline-block;position:relative; width:auto; height:auto; top: 0; margin: 0; left: 0;}
+.products .inner_wrap.products_detail .product_detail_inner .nutritional_info .btn_type_4 i { bottom:5px; left:187px; }
+.products .inner_wrap.products_detail .product_detail_inner .nutritional_info .btn_type_4 i:first-child { top:6px; }
 .products .inner_wrap.products_detail .product_detail_summary { padding:20px 20px 31px; }
-.products .inner_wrap.products_detail .product_detail_summary .product_logo { text-align:center; }
-.products .inner_wrap.products_detail .product_detail_summary .product_logo img { margin:0 auto; width: 133px; }
-.products .inner_wrap.products_detail .product_detail_summary .product_tit { margin:10px 0;font-size:24px;font-weight:bold;line-height:1.5;text-align:center; }
-.products .inner_wrap.products_detail .product_detail_summary .info_img { width:240px; margin: 0 auto; }
-.products .inner_wrap.products_detail .product_detail_summary .product_txt { margin-top:10px;font-size:16px;line-height:1.5; }
+
+/************** 제품 라벨 css **************/
+.products .inner_wrap.products_detail .product_detail_summary .product_logo { position: relative; width: 133px; height: 40px; font-size: 1.4rem; font-weight: bold; line-height: 2.2rem; margin: 0 auto; border-radius: 30px; background-color: #f9d74c; color: #b51946; text-align: center; padding: 9px 16px 9px 49px; }
+.products .inner_wrap.products_detail .product_detail_summary .product_logo span { visibility: hidden;line-height: 0; }
+.products .inner_wrap.products_detail .product_detail_summary .product_logo span:before { visibility: visible; content: '초코 시리얼'; }
+.products .inner_wrap.products_detail .product_detail_summary .product_logo:after { display: block; position:absolute;top:0;left:0;content: "";width: 40px; height: 40px; background:url(../image/sub/product_logo_choco.png) no-repeat;background-size:auto 40px; }
+
+.products .inner_wrap.products_detail .product_detail_summary .product_logo.choco { background-color: #f9d74c; }
+.products .inner_wrap.products_detail .product_detail_summary .product_logo.choco span:before { visibility: visible; content: '초코 시리얼'; }
+.products .inner_wrap.products_detail .product_detail_summary .product_logo.choco:after { background:url(../image/sub/product_logo_choco.png) no-repeat;background-size: auto 40px; }
+
+.products .inner_wrap.products_detail .product_detail_summary .product_logo.kids { background-color: #d5d5d5; }
+.products .inner_wrap.products_detail .product_detail_summary .product_logo.kids span:before { visibility: visible; content: '키즈 시리얼'; }
+.products .inner_wrap.products_detail .product_detail_summary .product_logo.kids:after { background:url(../image/sub/product_logo_kids.png) no-repeat;background-size: auto 40px; }
+
+.products .inner_wrap.products_detail .product_detail_summary .info_img_tablet { display:none; }
+.products .inner_wrap.products_detail .product_detail_summary .product_tit { margin:10px 0;font-size: 2.4rem;font-weight:bold;line-height:1.5;text-align:center; }
+.products .inner_wrap.products_detail .product_detail_summary .info_img img { margin: 0 auto; }
+.products .inner_wrap.products_detail .product_detail_summary .product_txt { margin-top:10px;font-size: 1.6rem;line-height:1.5; }
 .products .inner_wrap.products_detail .product_detail_summary .product_thumb_detail { display:flex;justify-content: space-between;margin-top:20px;}
 .products .inner_wrap.products_detail .product_detail_summary .product_thumb_detail .weight:before { content: ""; display: block; width: 42px; height: 59px; margin: 0 auto;background:url(../image/sub/product_weight.png) no-repeat center 0; }
 .products .inner_wrap.products_detail .product_detail_summary .product_thumb_detail .end_date:before { content: ""; display: block; width: 59px; height: 59px; margin: 0 auto;background:url(../image/sub/product_end_date.png) no-repeat center 0; }
 .products .inner_wrap.products_detail .product_detail_summary .product_thumb_detail .calory:before { content: ""; display: block; width: 60px; height: 57px; margin: 0 auto;background:url(../image/sub/product_calory.png) no-repeat center 0; }
-.products .inner_wrap.products_detail .product_detail_summary .product_thumb_detail > div .title { display:block;margin:11px 0 4px;text-align:center;font-size: 16px;line-height: 1;font-weight:500; }
+.products .inner_wrap.products_detail .product_detail_summary .product_thumb_detail > div .title { display:block;margin:11px 0 4px;text-align:center;font-size: 1.6rem;line-height: 1;font-weight:500; }
 .products .inner_wrap.products_detail .product_detail_summary .product_thumb_detail > div:last-child .title { margin-top:15px; }
-.products .inner_wrap.products_detail .product_detail_summary .product_thumb_detail > div .inner { text-align: center; vertical-align: middle; font-size:18px;font-weight:900;line-height:1.2;width:100px; height:54px;line-height:54px;border-radius: 3px; background-color: #ececec; }
+.products .inner_wrap.products_detail .product_detail_summary .product_thumb_detail > div .inner { text-align: center; vertical-align: middle; font-size: 1.8rem;font-weight:900;line-height:1.2;width:100px; height:54px;line-height:54px;border-radius: 3px; background-color: #ececec; }
 .products .inner_wrap.products_detail .product_detail_summary .product_thumb_detail > div.weight .inner { line-height: 1.2; padding: 7px 0; }
 .products .inner_wrap.products_detail .product_detail_summary .product_thumb_detail > div:not(:last-child) .inner { margin-top:26px; }
 .products .inner_wrap.products_detail .product_detail_summary .product_thumb_detail > div:last-child .inner { margin-top:8px; }
-.products .inner_wrap.products_detail .product_detail_summary .product_thumb_detail > div:last-child .sub_txt { display:block;margin-top:4px;font-size:12px; line-height:1; text-align:center; }
+.products .inner_wrap.products_detail .product_detail_summary .product_thumb_detail > div:last-child .sub_txt { display:block;margin-top:4px;font-size: 1.2rem;; line-height:1; text-align:center; }
 
 .products .inner_wrap.products_detail .product_detail_wrap.cont_inner { padding:0; }
 .products .inner_wrap.products_detail .product_detail_inner { padding:0 20px 21px; background-color:#fffceb; }
-.products .inner_wrap.products_detail .product_detail_inner .product_content { padding:24px 0 23px; font-size:16px; line-height:1.8; }
+.products .inner_wrap.products_detail .product_detail_inner .product_content { padding:24px 0 23px; font-size: 1.6rem; line-height:1.8; }
 .products .inner_wrap.products_detail .product_detail_inner .product_content.show_bb { border-bottom:1px solid #dbdbdb; }
 .products .inner_wrap.products_detail .product_detail_inner .product_content .tit { font-weight:900; }
-.products .inner_wrap.products_detail .product_detail_inner .nutritional_info { line-height:60px;height:60px;color:#fff;background-color:#c20f2f; width:100%; }
-.products .inner_wrap.products_detail .product_detail_inner .nutritional_info > div:first-child { text-align: center;font-size: 18px;}
+.products .inner_wrap.products_detail .product_detail_inner .nutritional_info { line-height:60px;height:60px; background-color:#c20f2f; width:100%;text-align:center; }
+.products .inner_wrap.products_detail .product_detail_inner .nutritional_info button { font-size: 1.8rem; color:#fff;}
 .products .inner_wrap.products_detail .nutritional_info_inner { display:none;background-color:#fffceb;padding:30px 0 14px;}
 .products .inner_wrap.products_detail .nutritional_info_inner.open { display:block; }
 .products .inner_wrap.products_detail .nutritional_info_inner .txt { display:none; }
-.products .inner_wrap.products_detail .nutritional_info_inner table { width:100%;text-align:center; font-size:14px; }
+.products .inner_wrap.products_detail .nutritional_info_inner table { width:100%;text-align:center; font-size: 1.4rem; }
 .products .inner_wrap.products_detail .nutritional_info_inner table thead th{ background-color: #f5edd6;height:60px;line-height:1.4; }
 .products .inner_wrap.products_detail .nutritional_info_inner table tr td { padding:12px 0; }
 
-.products .inner_wrap.products_detail .similar_product { margin:27px; 0 42px; overflow: hidden; position: relative; /*height: 52px;*/}
+.products .inner_wrap.products_detail .similar_product { margin:37px 0 60px; overflow: hidden; position: relative;}
 .products .inner_wrap.products_detail .similar_product .similar_wrap { overflow:hidden;overflow-x: scroll; }
 .products .inner_wrap.products_detail .similar_product .similar_wrap .similar_product_list { display: inline-flex; min-width: 100%; /*height: 51px;*/ padding: 0 20px; text-align: center; -webkit-box-pack: justify; }
 .products .inner_wrap.products_detail .similar_product .similar_wrap .similar_product_list .similar_item { display:inline-block; }
-.products .inner_wrap.products_detail .similar_product .similar_wrap .similar_product_list .similar_item a { width:136px;display: inline-block; position: relative; margin-right:12px; }
-.products .inner_wrap.products_detail .similar_product .similar_wrap .similar_product_list .similar_item a .product { display:inline-block;text-align:center;margin-top:4px;font-size:14px;line-height:18px; }
+.products .inner_wrap.products_detail .similar_product .similar_wrap .similar_product_list .similar_item a { width:136px;display: inline-block; position: relative; margin-right:12px;text-align:center;margin-top:4px;font-size: 1.4rem;line-height:18px; }
+.products .inner_wrap.products_detail .similar_product .similar_wrap .similar_product_list .similar_item a img { margin-bottom:4px; }
 
 /* Cereal & Nutrition */
 .nutrition .inner_wrap .inner_title { position:absolute;overflow:hidden;clip: rect(0 0 0 0);margin:-1px;width:1px;height:1px; }
-.nutrition .inner_wrap ul { display: inline-block; width: 100%; text-align:center; }
-.nutrition .inner_wrap li {width:50%;display:table; vertical-align:middle; height:34px; float:left}
-.nutrition .inner_wrap li a {display:table-cell;position:relative; font-size:14px; font-weight:500; vertical-align:middle; color:#2b292d; border:1px solid #d5d5d5; background-color:#fff; text-align:center;width:100%; height:100%; box-sizing:border-box;}
-.nutrition .inner_wrap li:nth-child(1) a, .nutrition .inner_wrap li:nth-child(2) a { border-bottom:none; }
-.nutrition .inner_wrap li:not(:last-child) a { border-right:none; }
-.nutrition .inner_wrap li.on a { color:#fff; border:1px solid #d5d5d5; background-color:#d20b2f; }
+.nutrition .inner_wrap ul.tab { display: inline-block; width: 100%; text-align:center; }
+.nutrition .inner_wrap ul.tab li {width:50%;display:table; vertical-align:middle; height:34px; float:left}
+.nutrition .inner_wrap ul.tab li a {display:table-cell;position:relative; font-size: 1.4rem; font-weight:500; vertical-align:middle; color:#2b292d; border:1px solid #d5d5d5; background-color:#fff; text-align:center;width:100%; height:100%; box-sizing:border-box;}
+.nutrition .inner_wrap ul.tab li:nth-child(1) a, .nutrition .inner_wrap ul.tab li:nth-child(2) a { border-bottom:none; }
+.nutrition .inner_wrap ul.tab li:nth-child(1) a, .nutrition .inner_wrap ul.tab li:nth-child(3) a { border-right:none; }
+.nutrition .inner_wrap ul.tab li.on a { color:#fff; border:1px solid #d20b2f ! important; background-color:#d20b2f; }
+
+.nutrition .cereal_nutrition_wrap dl.cereal_nutrition dt { font-size:2.0rem; font-weight:bold; line-height:1.4; color:#1c2e3d; text-align:center; }
+.nutrition .cereal_nutrition_wrap dl dd img { width:100%; }
+
+.nutrition .cereal_nutrition_wrap dl.content_1 dt { padding-bottom:35px; }
+.nutrition .cereal_nutrition_wrap dl.content_1 dd { background-color:#fffceb; padding:12px 20px; font-size: 1.6rem; font-weight:500; line-height:28px; text-align:center; }
+.nutrition .cereal_nutrition_wrap dl.content_1 dd img { width:100%; }
+
+
+.nutrition .cereal_nutrition_wrap dl.content_2 { position:relative; padding:20px 20px 50px; }
+.nutrition .cereal_nutrition_wrap dl.content_2 dd img { padding:20px 0; }
+.nutrition .cereal_nutrition_wrap dl.content_2 dd { font-size: 1.6rem; font-weight:500; line-height:28px; color:#878c91;}
+
+.nutrition .cereal_nutrition_wrap dl.content_3 { padding:0 20px; }
+.nutrition .cereal_nutrition_wrap dl.content_3 .fact_list li:nth-child(1) img { padding:20px 0 14px; }
+.nutrition .cereal_nutrition_wrap dl.content_3 .fact_list li { font-size: 1.4rem; line-height:28px; font-weight:bold; }
+.nutrition .cereal_nutrition_wrap dl.content_3 .fact_list li div { font-weight:normal; }
+.nutrition .cereal_nutrition_wrap dl.content_3 .fact_list li.mb35 { margin-bottom:35px; }
+.nutrition .cereal_nutrition_wrap dl.content_3 .fact_list li.mb20 { margin-bottom:20px; }
+
+.nutrition .cereal_nutrition_wrap dl.content_3 .fact_list li.img_list { width:100%; display:flex; }
+.nutrition .cereal_nutrition_wrap dl.content_3 .fact_list li.img_list > div:not(:last-child) { margin-right:6px; }
+
+/* from-seed-to-table */
+/************** 따옴표 background **************/
+.bg_area { position:relative; }
+.bg_area:after { position:absolute;content: ""; display: block; width: 70px; height: 70px; top:-35px; left:50%; margin-left:-35px; background:url(../image/sub/from_seed_to_table_bg_1.png) no-repeat center 0; }
+
+.nutrition .from_seed_wrap .from_seed_info { width:100%; }
+.nutrition .from_seed_wrap .from_seed_info li div { padding:23px 0 30px; font-size:1.6rem; line-height:28px; color:#878c91; }
+.nutrition .from_seed_wrap .from_seed_info li div span { font-weight:bold; display:block; }
+
+.nutrition .from_seed_wrap .from_seed_declare { margin-top: 65px; background-color: #fffceb;padding:37px 8px; font-size:1.6rem; line-height:28px; color:#000; text-align:center; }
+.video_cont { margin-top:30px; position: relative; width: 100%; height: 0; padding-bottom: 56.25%; }
+.video_cont iframe { position: absolute; top: 0; left: 0;width:100%; height:100%; }
+
+/* nutritional-benefits-of-grains */
+/************** fnq 아이콘 **************/
+.btn_type_5 {display: inline-block;position: absolute;top:12px;width:30px;height:30px;left:0;background-color:#fff; border:2px solid #d5d5d5;}
+.btn_type_5:before {display: inline-block;position: absolute;width:12px;top:50%;left: 50%;margin: -1px 0 0 -6px;border-top:2px solid #d5d5d5;content: "";}
+.btn_type_5:after {display: inline-block;position: absolute;width:12px;top:50%;left: 50%;margin: -1px 0 0 -6px;border-top:2px solid #d5d5d5;content: "";transform: rotate(90deg);-webkit-transform: rotate(90deg);}
+.fnq dt.active .btn_type_5 { background-color:#d5d5d5; border: none; }
+.fnq dt.active .btn_type_5:before {display: inline-block;position: absolute;width:12px;top:50%;left: 50%;margin: -1px 0 0 -6px;border-top:2px solid #fff;content: "";}
+.fnq dt.active .btn_type_5:after {display:none;}
+
+.nutrition .nutritional_benefits_wrap .nutritional_benefits_info { padding:0 20px; }
+.nutrition .nutritional_benefits_wrap .nutritional_benefits_info div { margin:24px 0 37px; font-size: 1.6rem; line-height:28px; color:#2b292d; }
+
+.nutrition .nutritional_benefits_wrap .nutritional_benefits_list { padding:0 26px 30px 20px; }
+.nutrition .nutritional_benefits_wrap .nutritional_benefits_list .list_wrap { background-color:#fffceb;  font-size:1.6rem; line-height:28px; color: #2b292d; padding:27px 9px; box-shadow: 14px 14px 20px 0 rgba(255, 191, 48, 0.22);}
+.nutrition .nutritional_benefits_wrap .nutritional_benefits_list ul li strong { display:block; font-size:1.8rem; }
+.nutrition .nutritional_benefits_wrap .nutritional_benefits_list .list_wrap > ul:nth-child(1) > li { margin-bottom:40px; }
+.nutrition .nutritional_benefits_wrap .nutritional_benefits_list .list_wrap > ul:nth-child(2) > li { color:#878c91; }
+
+.nutrition .nutritional_benefits_wrap .nutritional_benefits_side { padding:0 20px; }
+.nutrition .nutritional_benefits_wrap .nutritional_benefits_side > div { font-size:3.0rem;line-height:56px; color:#1c2e3d; font-weight:bold; }
+
+.nutrition .nutritional_benefits_wrap .fnq { margin-top:24px; padding:0 20px; }
+.nutrition .nutritional_benefits_wrap .fnq > div { font-size:3.0rem;line-height:56px; color:#1c2e3d; font-weight:bold; }
+.nutrition .nutritional_benefits_wrap .fnq dl dt { position:relative; font-size:1.6rem; line-height:24px; color: #2b292d; padding:16px 0 12px 44px; cursor:pointer;}
+.nutrition .nutritional_benefits_wrap .fnq dl dd { display:none; background-color:#fffceb; font-size:1.6rem; line-height:28px; padding:18px 9px; color: #878c91; }
+.nutrition .nutritional_benefits_wrap .fnq dl dd.active { display:block; }
+
+/* cereal-innovation */
+.nutrition .cereal_innovation_wrap .sub_title { padding-bottom:50px; }
+.nutrition .cereal_innovation_wrap .explanation { background-color: #fffceb;  }
+.nutrition .cereal_innovation_wrap .explanation > ul { padding: 39px 8px 29px; font-size:1.4rem;line-height:22px; color:#000;font-weight:normal; }
+
+.nutrition .cereal_innovation_wrap .img_box { margin-top:12px; }
+.nutrition .cereal_innovation_wrap .tit { font-size:1.8rem;line-height:28px; font-weight:bold; color:#2b292d; margin-bottom:12px; }
+.nutrition .cereal_innovation_wrap .cont { font-size:1.6rem; line-height:28px;color:#878c91; margin-bottom:12px; }
+.nutrition .cereal_innovation_wrap > dl:last-child dd { margin:0 ! important ; }
+.nutrition .cereal_innovation_wrap .img_box img { margin:12px 0; width:100%; }
 
 /* Tablet Device */
 @media (min-width: 768px) {
+	/* container */
+	.tab_inner_wrap { padding:60px 0 60px; }
+	.tab_inner_wrap.type_2 { padding:60px 20px 60px; }
+	#container.nutrition { background-color:#fff; }
+	#container .sub_title { font-size:3.6rem; line-height:50px; text-align:center; padding-bottom:56px; }
+
 	/* brand-products-list */
 
 	/************** search 아이콘 **************/
@@ -110,18 +205,19 @@ img { max-width:100%; display: block;}
 
 	.products .search_area { padding: 48px 24px 33px; }
 	.products .search_area .search_box { padding: 14px 19px 14px 14px; }
-	.products .search_area .search_box .input_text { font-size: 18px; }
+	.products .search_area .search_box .input_text { font-size: 1.8rem; }
 	.products .search_area .search_keword { margin-top:35px; }
-	.products .search_area .search_keword .title { font-size: 16px;display:inline-block;margin-right:30px;}
+	.products .search_area .search_keword .title { font-size: 1.6rem;display:inline-block;margin-right:30px;}
 	.products .search_area .search_keword .keword_list { display:inline-block; width: calc( 100% - 111px );}
 	.products .search_result.cont_inner { background:#fff; }
-	.products .search_result_wrap { padding:86px 0 63px; }
-	.products .search_result_wrap .title { margin:0;font-size:30px; font-weight:bold; line-height:1.4; }
-	.products .search_result_wrap .data_count{ margin-left:12px;font-size:18px; line-height:1.6; }
-	.products .product_list > div.product_item {width: calc( 100%/3 - 13px );}
-	.products .product_list > div.product_item a span.product {  font-size:18px; margin:10px 0 16px; }
-	.products .product_list > div.product_item a span.new {width:72px; height:80px; }
-	.products .product_list > div.product_item a span.new span { width:72px; height:80px;line-height:80px;font-size: 28px; }
+	.products .search_result_wrap { padding:86px 0 60px; }
+	.products .search_result_wrap .title { margin:0;font-size: 3.0rem; font-weight:bold; line-height:1.4; }
+	.products .search_result_wrap .data_count{ margin-left:12px;font-size: 1.8rem; line-height:1.6; }
+	.products .product_list > .product_item {width: calc( 100%/3 - 13px );}
+	.products .product_list > .product_item:not(:last-child) { margin-bottom:16px; }
+	.products .product_list > .product_item a {  font-size: 1.8rem; }
+	.products .product_list > .product_item a span.new {width:72px; height:80px; }
+	.products .product_list > .product_item a span.new span { width:72px; height:80px;line-height:80px;font-size: 2.8rem; }
 
 	/* brand-products-detail */
 
@@ -131,51 +227,120 @@ img { max-width:100%; display: block;}
 	.products .inner_wrap.products_detail .product_detail_summary { display: inline-block;position: relative;width:100%;padding:123px 20px 40px; }
 	.products .inner_wrap.products_detail .product_detail_summary:after { clear:both;content:""; }
 	.products .inner_wrap.products_detail .product_detail_summary .summary_inner { float:right; width: calc( 50% - 12px); }
-	.products .inner_wrap.products_detail .product_detail_summary .product_logo { position: absolute; display: inline-block; left: 50%; top: 30px; margin-left: -100px; }
-	.products .inner_wrap.products_detail .product_detail_summary .product_logo img { width: 200px; }
-	.products .inner_wrap.products_detail .product_detail_summary .product_tit { font-size:34px;margin:30px 0 8px;text-align:left; }
-	.products .inner_wrap.products_detail .product_detail_summary .info_img { position:absolute;top:138px; left:20px;width:354px; margin: 0; }
-	.products .inner_wrap.products_detail .product_detail_summary .info_img img { max-width:354px; }
-	.products .inner_wrap.products_detail .product_detail_summary .product_txt { margin-top:12px;font-size:16px;line-height:1.5; }
+	.products .inner_wrap.products_detail .product_detail_summary .product_logo { position: absolute; display: inline-block; left: 50%; top: 30px; margin-left: -100px;width: 200px; height: 60px; font-size: 2.1rem; line-height: 3.5rem; padding: 12px 20px 13px 74px; }
+	.products .inner_wrap.products_detail .product_detail_summary .product_logo:after { width: 60px; height: 60px; background:url(../image/sub/product_logo_choco.png) no-repeat;background-size:auto 60px; }
+
+	/************** 제품 라벨 css **************/
+	.products .inner_wrap.products_detail .product_detail_summary .product_logo.choco:after { background-size: auto 60px; }
+	.products .inner_wrap.products_detail .product_detail_summary .product_logo.kids:after { background-size: auto 60px; }
+
+	.products .inner_wrap.products_detail .product_detail_summary .product_tit { font-size: 3.4rem;margin:30px 0 8px;text-align:left; }
+	.products .inner_wrap.products_detail .product_detail_summary .info_img { display:none; }
+	.products .inner_wrap.products_detail .product_detail_summary .info_img_tablet { display:block; }
+	.products .inner_wrap.products_detail .product_detail_summary .info_img_tablet img { width:354px; }
+	.products .inner_wrap.products_detail .product_detail_summary .product_txt { margin-top:12px;font-size: 1.6rem;line-height:1.5; }
 	.products .inner_wrap.products_detail .product_detail_summary .product_thumb_detail { margin-top:17px;}
 
 	.products .inner_wrap.products_detail .product_detail_wrap.cont_inner { padding:0 20px; }
-	.products .inner_wrap.products_detail .product_detail_inner .product_content { padding:26px 0 18px; font-size:18px; line-height:1.7; }
+	.products .inner_wrap.products_detail .product_detail_inner .product_content { padding:26px 0 18px; font-size: 1.8rem; line-height:1.7; }
 	.products .inner_wrap.products_detail .nutritional_info_inner { display:none;padding:30px 0;}
 	.products .inner_wrap.products_detail .nutritional_info_inner.open { display:block; }
 	.products .inner_wrap.products_detail .nutritional_info_inner .txt { display:none; }
-	.products .inner_wrap.products_detail .nutritional_info_inner table { font-size:18px; }
+	.products .inner_wrap.products_detail .nutritional_info_inner table { font-size: 1.8rem; }
 	.products .inner_wrap.products_detail .nutritional_info_inner table thead th{ background-color: #f5edd6;height:60px;line-height:1.4; }
 	.products .inner_wrap.products_detail .nutritional_info_inner table thead tr th:nth-child(2) .line_break { display:inline-block; }
 	.products .inner_wrap.products_detail .nutritional_info_inner table tr td { padding:15px 0; }
 
-	.products .inner_wrap.products_detail .similar_product { margin:30px; 0 53px; }
-	.products .inner_wrap.products_detail .similar_product .similar_wrap { overflow:hidden;overflow-x: scroll; }
-	.products .inner_wrap.products_detail .similar_product .similar_wrap .similar_product_list { display: inline-flex; min-width: 100%; /*height: 51px;*/ padding: 0 20px; text-align: center; -webkit-box-pack: justify; }
-	.products .inner_wrap.products_detail .similar_product .similar_wrap .similar_product_list .similar_item { display:inline-block; }
-	.products .inner_wrap.products_detail .similar_product .similar_wrap .similar_product_list .similar_item a { width:136px;display: inline-block; position: relative; margin-right:12px; }
-	.products .inner_wrap.products_detail .similar_product .similar_wrap .similar_product_list .similar_item a .product { display:inline-block;text-align:center;margin-top:4px;font-size:14px;line-height:18px; }
+	.products .inner_wrap.products_detail .similar_product { margin:30px 20px 60px; }
+	.products .inner_wrap.products_detail .similar_product .similar_wrap .similar_product_list { padding:0; }
+	.products .inner_wrap.products_detail .similar_product .similar_wrap .similar_product_list .similar_item a { width:200px; }
 
 	/* Cereal & Nutrition */
-	.nutrition .inner_wrap .inner_title { position: relative; display: block; font-size: 30px; font-weight: bold; line-height: 1.3; padding: 30px 24px 24px; overflow: visible; clip: auto; width: 100%; height: auto; }
-	.nutrition .inner_wrap ul { padding: 0 20px; }
-	.nutrition .inner_wrap li {width:25%;height:60px; }
-	.nutrition .inner_wrap li a {font-size:16px; }
+	.nutrition .inner_wrap ul.tab { padding: 30px 20px 0; }
+	.nutrition .inner_wrap ul.tab li {width:25%;height:60px; }
+	.nutrition .inner_wrap ul.tab li a {font-size: 1.6rem; }
+	.nutrition .inner_wrap ul.tab li:not(:last-child) a { border-right:none; }
+	.nutrition .inner_wrap ul.tab li:nth-child(1) a, .nutrition .inner_wrap ul.tab li:nth-child(2) a { border-bottom:1px solid #d5d5d5; }
+
+	.nutrition .cereal_nutrition_wrap dl.cereal_nutrition dt { font-size:3.0rem; line-height:56px; text-align:left; padding-bottom:35px; }
+	.nutrition .cereal_nutrition_wrap dl dd img { width:100%; }
+
+	.nutrition .cereal_nutrition_wrap dl.content_1 dd { padding:30px 109px; font-size: 1.8rem; font-weight:normal; line-height:32px; }
+	.nutrition .cereal_nutrition_wrap dl.content_1 dd img { width:100%; }
+
+
+	.nutrition .cereal_nutrition_wrap dl.content_2 { padding:51px 20px 40px; }
+	.nutrition .cereal_nutrition_wrap dl.content_2 dd img { padding:0; }
+	.nutrition .cereal_nutrition_wrap dl.content_2 dd { display:flex; font-size: 1.6rem; font-weight:500; line-height:30px; }
+	.nutrition .cereal_nutrition_wrap dl.content_2 dd > div:first-child { order:1; flex:0 0 317px;  }
+	.nutrition .cereal_nutrition_wrap dl.content_2 dd > div:last-child { order:0; flex:1 1 auto; margin-right:20px; }
+
+	.nutrition .cereal_nutrition_wrap dl.content_3 { padding:0 20px; }
+	.nutrition .cereal_nutrition_wrap dl.content_3 dt .line_break { display:inline-block; }
+	.nutrition .cereal_nutrition_wrap dl.content_3 .fact_list li:nth-child(1) img { padding:0 0 14px; }
+	.nutrition .cereal_nutrition_wrap dl.content_3 .fact_list li { font-size: 1.6rem; }
+
+	.nutrition .cereal_nutrition_wrap dl.content_3 .fact_list > li:nth-child(1) { display:flex; }
+	.nutrition .cereal_nutrition_wrap dl.content_3 .fact_list > li:nth-child(1) > div { flex:0 0 310px; margin-right:13px; }
+	.nutrition .cereal_nutrition_wrap dl.content_3 .fact_list > li:nth-child(1) > ul { flex:1 1 auto; }
+	
+	.nutrition .cereal_nutrition_wrap dl.content_3 .fact_list > li:nth-child(7), .nutrition .cereal_nutrition_wrap dl.content_3 .fact_list > li:nth-child(8) { margin-bottom:30px; }
+	.nutrition .cereal_nutrition_wrap dl.content_3 .fact_list li.img_list > div:not(:last-child) { margin-right:13px; }
+
+	/* from-seed-to-table */
+	.nutrition .from_seed_wrap .from_seed_info { width:100%; display:flex; justify-content: space-between; }
+	.nutrition .from_seed_wrap .from_seed_info li { width:calc( 50% - 10px ); }
+	.nutrition .from_seed_wrap .from_seed_info li div { padding:23px 0 0; }
+
+	.nutrition .from_seed_wrap .from_seed_declare { margin-top: 53px; padding:45px 32px; font-size:1.8rem; line-height:30px; }
+	.video_cont { margin-top:40px; }
+
+	/* nutritional-benefits-of-grains */
+	.nutrition .nutritional_benefits_wrap .nutritional_benefits_info div { margin:40px 0 12px; }
+
+	.nutrition .nutritional_benefits_wrap .nutritional_benefits_list { padding:0 40px 80px; }
+	.nutrition .nutritional_benefits_wrap .nutritional_benefits_list .list_wrap { padding:40px 19px;}
+
+	.nutrition .nutritional_benefits_wrap .fnq dl dt { padding:18px 0 14px 44px;}
+	.nutrition .nutritional_benefits_wrap .fnq dl dd { padding:18px 20px 26px; }
+
+	/* cereal-innovation */
+	.nutrition .cereal_innovation_wrap .sub_title { padding-bottom:56px; }
+	.nutrition .cereal_innovation_wrap .explanation > ul { padding: 36px 0; font-size:2.0rem;line-height:36px;font-weight:500; text-align:center; }
+
+	.nutrition .cereal_innovation_wrap .img_box { margin-top:58px; position:relative; }
+	.nutrition .cereal_innovation_wrap .cont { margin-bottom:30px; }
+
+	.nutrition .cereal_innovation_wrap .img_box .tit { display:inline-block; }
+	.nutrition .cereal_innovation_wrap .img_box .cont { display:inline-block; width: calc( 100% - 250px ); }
+	.nutrition .cereal_innovation_wrap .img_box img { display:none; }
+	.nutrition .cereal_innovation_wrap .img_box { background:url(../image/sub/cereal_innovation_img_768.png) no-repeat right 0; }
+
+}
+
+@media (min-width: 1120px) {
+	/* cereal-innovation */
+	.nutrition .cereal_innovation_wrap .img_box { height:230px; }
+
 }
 
 /* Desktop */
 @media (min-width: 1180px) {
 	/* container */
 	.inner_wrap {position:relative; padding:0;}
-	#container.products { background:#fff; }
+	.tab_inner_wrap { background-color:#fff; margin-top:50px; padding:60px 0 100px; }
+	.tab_inner_wrap.type_2 { padding:60px 125px 100px; }
+	#container.products { background-color:#fff; }
+	#container.nutrition { background-color:#fbfbfb; }
+	#container .sub_title { font-size:3.6rem; line-height:50px; text-align:center; padding-bottom:56px; }
 
 	/* brand-products-list */
 	.products .search_area { padding: 48px 0 37px; }
 	.products .search_result.cont_inner { background:#fff;padding:0; }
-	.products .search_result_wrap { padding:91px 0 234px; }
+	.products .search_result_wrap { padding:91px 0 100px; }
 	.products .search_result_wrap .title { line-height:1.5; }
-	.products .product_list > div.product_item {width: calc( 100%/3 - 13px );}
-	.products .product_list > div.product_item a span.product { font-size:18px; margin:10px 0 37px; }
+	.products .product_list > .product_item {width: calc( 100%/3 - 13px );}
+	.products .product_list > .product_item:not(:last-child) { margin-bottom:37px; }
 
 	/* brand-products-detail */
 
@@ -186,11 +351,10 @@ img { max-width:100%; display: block;}
 	.products .inner_wrap.products_detail .product_detail_summary:after { clear:both;content:""; }
 	.products .inner_wrap.products_detail .product_detail_summary .summary_inner { float:none; width: 100%;padding-left:639px; }
 	.products .inner_wrap.products_detail .product_detail_summary .product_logo { position:relative;display: inline-block;left:0;top:0;margin:0; }
-	.products .inner_wrap.products_detail .product_detail_summary .product_logo img { width: 200px; }
 	.products .inner_wrap.products_detail .product_detail_summary .product_tit { margin:40px 0 48px;text-align:left; }
 	.products .inner_wrap.products_detail .product_detail_summary .info_img { position:absolute;top:30px; left:0;width:600px; margin: 0; }
 	.products .inner_wrap.products_detail .product_detail_summary .info_img img { max-width:100%; }
-	.products .inner_wrap.products_detail .product_detail_summary .product_txt { margin:0; font-size:21px; }
+	.products .inner_wrap.products_detail .product_detail_summary .product_txt { margin:0; font-size: 2.1rem; }
 	.products .inner_wrap.products_detail .product_detail_summary .product_thumb_detail { margin-top:67px; justify-content: start;}
 	.products .inner_wrap.products_detail .product_detail_summary .product_thumb_detail > div { margin-right:74px; }
 
@@ -198,19 +362,75 @@ img { max-width:100%; display: block;}
 	.products .inner_wrap.products_detail .product_detail_inner { padding:0 20px 23px; }
 	.products .inner_wrap.products_detail .nutritional_info_inner { display:none;background-color:#fffceb;padding:30px 0 14px;}
 	.products .inner_wrap.products_detail .nutritional_info_inner.open { display:block;padding-top:0; }
-	.products .inner_wrap.products_detail .nutritional_info_inner .txt { display:block;font-size:18px; line-height:1.7;padding:0 20px 15px; }
+	.products .inner_wrap.products_detail .nutritional_info_inner .txt { display:block;font-size: 1.8rem; line-height:1.7;padding:0 20px 15px; }
 	.products .inner_wrap.products_detail .nutritional_info_inner table thead tr th .line_break { display:inline-block; }
 	.products .inner_wrap.products_detail .nutritional_info_inner table tr td { padding:22px 0; }
 
-	.products .inner_wrap.products_detail .similar_product { margin:80px 0 115px; overflow: hidden; position: relative;}
+	.products .inner_wrap.products_detail .similar_product { margin:80px 0 100px; position: relative;}
+	.products .inner_wrap.products_detail .similar_product .similar_wrap { overflow-x:hidden; }
 	.products .inner_wrap.products_detail .similar_product .similar_wrap .similar_product_list { padding:0; }
 	.products .inner_wrap.products_detail .similar_product .similar_wrap .similar_product_list .similar_item { display:inline-block; }
-	.products .inner_wrap.products_detail .similar_product .similar_wrap .similar_product_list .similar_item a { width:220px;margin-right:20px; }
-	.products .inner_wrap.products_detail .similar_product .similar_wrap .similar_product_list .similar_item a .product { margin-top:7px;font-size:18px;line-height:1.6; }
+	.products .inner_wrap.products_detail .similar_product .similar_wrap .similar_product_list .similar_item a { width:220px;margin-right:20px; font-size: 1.8rem;line-height:1.6; }
+	.products .inner_wrap.products_detail .similar_product .similar_wrap .similar_product_list .similar_item a img { margin-bottom:7px; }
 
 	/* Cereal & Nutrition */
-	.nutrition .inner_wrap .inner_title { font-size: 40px; font-weight: bold; padding: 60px 0 35px; }
-	.nutrition .inner_wrap ul { padding: 0; }
-	.nutrition .inner_wrap li {width:25%;height:60px; }
-	.nutrition .inner_wrap li a {font-size:18px;font-weight:bold; }
+	.nutrition .inner_wrap .inner_title { position: relative; display: block; font-size: 4.0rem; font-weight: bold; line-height: 1.3; padding: 60px 0 35px; overflow: visible; clip: auto; width: 100%; height: auto;}
+	.nutrition .inner_wrap ul.tab { padding: 0; }
+	.nutrition .inner_wrap ul.tab li {width:25%;height:60px; }
+	.nutrition .inner_wrap ul.tab li a {font-size: 1.8rem;font-weight:bold; }
+
+	.nutrition .cereal_nutrition_wrap dl.cereal_nutrition dt { font-size:3.0rem; line-height:56px; text-align:left; padding-bottom:35px; }
+	.nutrition .cereal_nutrition_wrap dl dd img { width:100%; }
+
+	.nutrition .cereal_nutrition_wrap dl.content_1 dd { padding:56px 110px; font-size: 2.1rem; line-height:36px; }
+	.nutrition .cereal_nutrition_wrap dl.content_1 dd img { width:100%; }
+
+
+	.nutrition .cereal_nutrition_wrap dl.content_2 { position:relative; padding:50px 125px 56px; }
+	.nutrition .cereal_nutrition_wrap dl.content_2 dd img { padding:0; max-width:394px; }
+	.nutrition .cereal_nutrition_wrap dl.content_2 dd { display:inline-block; font-size: 1.8rem; font-weight:bold; line-height:30px; }
+	.nutrition .cereal_nutrition_wrap dl.content_2 dd > div:first-child { flex:none; position: absolute; top: 50px; right: 125px; }
+	.nutrition .cereal_nutrition_wrap dl.content_2 dd > div:last-child { flex:none; width:490px; margin-right:20px; }
+
+	.nutrition .cereal_nutrition_wrap dl.content_3 { padding:0 125px; }
+	.nutrition .cereal_nutrition_wrap dl.content_3 .fact_list li:nth-child(1) img { padding:0 0 35px; }
+	.nutrition .cereal_nutrition_wrap dl.content_3 .fact_list li { font-size: 1.6rem; line-height:32px; }
+	.nutrition .cereal_nutrition_wrap dl.content_3 .fact_list li.mb20 { margin-bottom:50px; }
+
+	.nutrition .cereal_nutrition_wrap dl.content_3 .fact_list > li:nth-child(1) { display:flex; }
+	.nutrition .cereal_nutrition_wrap dl.content_3 .fact_list > li:nth-child(1) > div { flex:0 0 265px; margin-right:20px; }
+	.nutrition .cereal_nutrition_wrap dl.content_3 .fact_list > li:nth-child(1) > ul { flex:1 1 auto; }
+	
+	.nutrition .cereal_nutrition_wrap dl.content_3 .fact_list > li:nth-child(7), .nutrition .cereal_nutrition_wrap dl.content_3 .fact_list > li:nth-child(8) { margin-bottom:30px; }
+	.nutrition .cereal_nutrition_wrap dl.content_3 .fact_list li.img_list > div:not(:last-child) { margin-right:18px; }
+
+	/* from-seed-to-table */
+	.nutrition .from_seed_wrap .from_seed_info li { width:calc( 50% - 12px ); }
+	.nutrition .from_seed_wrap .from_seed_info li div { padding:23px 0 0; }
+
+	.nutrition .from_seed_wrap .from_seed_declare { padding:44px 65px 34px 65px; font-size:2.4rem; line-height:36px; }
+	.video_cont { margin-top:50px; }
+
+	/* nutritional-benefits-of-grains */
+	.nutrition .nutritional_benefits_wrap .nutritional_benefits_info { padding:0; }
+	.nutrition .nutritional_benefits_wrap .nutritional_benefits_info div { margin:40px 125px; }
+
+	.nutrition .nutritional_benefits_wrap .nutritional_benefits_list { padding:0 160px 80px; }
+	.nutrition .nutritional_benefits_wrap .nutritional_benefits_list .list_wrap { padding:40px; }
+
+	.nutrition .nutritional_benefits_wrap .nutritional_benefits_side { padding:0 125px; }
+
+	.nutrition .nutritional_benefits_wrap .fnq { margin-top:60px; padding:0 125px; }
+	.nutrition .nutritional_benefits_wrap .fnq dl dt { padding:18px 0 15px 44px;}
+	.nutrition .nutritional_benefits_wrap .fnq dl dd { padding:18px 25px 26px; }
+
+	/* cereal-innovation */
+	.nutrition .cereal_innovation_wrap .sub_title { padding-bottom:71px; }
+	.nutrition .cereal_innovation_wrap .explanation > ul { padding: 36px 0;text-align:center; }
+
+	.nutrition .cereal_innovation_wrap .img_box { margin-top:36px;}
+
+	.nutrition .cereal_innovation_wrap .img_box .cont { width: calc( 100% - 290px ); }
+	.nutrition .cereal_innovation_wrap .img_box { background:url(../image/sub/cereal_innovation_img_1180.png) no-repeat right 0; height:auto; }
+
 }

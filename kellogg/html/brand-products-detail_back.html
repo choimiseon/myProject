@@ -111,16 +111,15 @@
 	</header><!--E: header -->
 	
 	<div id="container" class="products">
-		
+
 		<h3 class="blind">Brand &amp; <span>Products</span></h3>
 		<div class="products_detail_visual"></div><!-- 상단 이미지 -->
-		
+
 		<div class="inner_wrap products_detail"><!-- S: inner_wrap -->
 			<div class="product_detail_summary"><!-- S: product_detail_summary -->
-				<!-- [개발] 카테고리에 따라 제품 라벨 노출 -->
-				<div class="product_logo"><span>초코 시리얼</span></div><!-- kids 클래스 추가시 제품 라벨 변경됨 -->
-				<img src="http://placehold.it/600x600" alt="코코팝스" class="info_img_tablet">
 				<div class="summary_inner">
+					<!-- [개발] 카테고리에 따라 제품 라벨 노출 -->
+					<div class="product_logo"><span>초코 시리얼</span></div><!-- kids 클래스 추가시 제품 라벨 변경됨 -->
 					<div class="product_tit">프로틴 그래놀라 미숫가루큐브 &#38; 검정약콩</div>
 					<div class="info_img"><img src="http://placehold.it/600x600" alt="코코팝스"></div>
 					<div class="product_txt">쌀을 뻥 튀겨 진한 코코아를 입힌 코코팝스는 초콜릿을 좋아하는 아이들은 누구나 좋아하는 초콜릿 맛 시리얼 입니다</div>
@@ -167,12 +166,14 @@
 						<p>정보가 없습니다.</p>
 					</div>
 					<div class="nutritional_info">
-						<button type="button" class="nutritional_open btn btn_type_4">
-							영양 성분표 자세히보기
+						<div>
+							<span>영양 성분표 자세히보기</span>
 							<!-- open 클래스 추가 시 버튼 변경 -->
-							<i></i>
-							<i></i>
-						</button>
+							<button type="button" class="btn btn_type_4 nutritional_open">
+								<i></i>
+								<i></i>
+							</button>
+						</div>
 					</div>
 				</div><!-- E: product_detail_inner  -->
 				<div class="nutritional_info_inner"><!-- S: nutritional_info_inner  --><!-- open 클래스 추가 시 영양 성분표 노출 -->
