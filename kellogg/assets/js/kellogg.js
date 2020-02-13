@@ -22,7 +22,7 @@ var CommonJs = (function(){
         	/***************************
         	* main slider *
         	***************************/
-        	var swiperTarget = [".sec_visual .swiper-container"];
+        	var swiperTarget = [".sec_visual .swiper-container", ".products_detail.swiper-container"];
         	var swiper;
         	$.each(swiperTarget, function (i, target) {
         		var swiperOption = {
@@ -181,6 +181,13 @@ var Interaction = (function(){
             if(CommonJs.isMobile()) $(".gnb_inner").nanoScroller();
             
         }
+		
+		/***************************
+    	* m main product arrow *
+    	***************************/
+        var sliderArrow = $('.btn_arrows'),
+        	sliderImg = $('.info_img_tablet').height() - ($('.info_img_tablet').height() / 2);
+        	sliderArrow.css({'top':sliderImg});
 	}
 	
 	/***************************
