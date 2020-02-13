@@ -7,7 +7,7 @@
 	<meta http-equiv="Content-Script-Type" content="text/javascript">
 	<meta http-equiv="Content-Style-Type" content="text/css">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
-	<meta name="format-detection" content="telephone=no">
+	<meta name="format-detection" content="telephone=no"> 
 	
 	<link rel="canonical" href="https://www.kellogg.co.kr/ko_KR/home.html">
 	<meta name="author" content="kellogg">
@@ -25,7 +25,7 @@
 	<meta name="twitter:image" content="">
 	<meta name="twitter:description" content="kellogg">
 	
-	<title>Contact Us | Kellogg's</title>
+	<title>Brand &amp; Products | Kellogg's</title>
 	
 	<link rel="shortcut icon" type="image/x-icon" href="../assets/image/common/favicon.ico">
 	
@@ -34,6 +34,7 @@
 	<link rel="stylesheet" href="../assets/css/swiper.css">
 	
 	<link rel="stylesheet" href="../assets/css/kellogg.css">
+	<link rel="stylesheet" href="../assets/css/sub_kellogg.css">
 	
 	<script src="../assets/js/jquery-3.4.1.min.js" charset="utf-8"></script>
 	<script src="../assets/js/jquery.nanoscroller.min.js" charset="utf-8"></script>
@@ -50,32 +51,31 @@
 	<header id="header">
 		<div class="inner_wrap">
 			<h1>
-				<!-- <img srcset="/myproject/assets/image/common/logo_576.png, /myproject/assets/image/common/logo_768.png 1.5x, /myproject/assets/image/common/logo_1280.png 2x" src="/myproject/assets/image/common/logo_1280.png" alt="Kellogg's"> -->
 				<a href="../html/index.html"><img 
 					srcset="../assets/image/common/logo_576.png 576w, 
 					../assets/image/common/logo_768.png 768w, 
 					../assets/image/common/logo_1280.png 1280w"  
 					sizes="(min-width: 1280px) 1280px" 
-					src="../assets/image/common/logo_1280.png" alt="">
+					src="../assets/image/common/logo_1280.png" alt="kellogg's">
 				</a>
 			</h1>
 			<!-- S: mobile/tablet 메뉴 열기 버튼 -->
-			<button type="button" class="button menu_open">
-				<div class="k_icon ham_menu">
-					<i></i>
-					<i></i>
-					<i></i>
-				</div>
-			</button><!-- E: mobile 메뉴 오픈 영역 -->
+			<button type="button" class="btn btn_type_1 menu_open" title="전체메뉴 열기">
+				<i></i>
+				<i></i>
+				<i></i>
+			</button>
+			<!-- E: mobile 메뉴 오픈 영역 -->
 			
 			<nav id="menu_aside">
 				<!-- S: mobile/tablet 메뉴 닫기 버튼 -->
-				<button class="button menu_close">
-					<div class="k_icon close_x">
+				<div class="close_wrap">
+					<button type="button" class="btn btn_type_2 menu_close" title="전체메뉴 닫기">
 						<i></i>
 						<i></i>
-					</div>
-				</button><!-- E: mobile/tablet 메뉴 닫기 버튼 -->
+					</button>
+				</div>
+				<!-- E: mobile/tablet 메뉴 닫기 버튼 -->
 				<div class="gnb_area">
 					<div class="gnb_inner">
 						<div class="custom_scroll_content">
@@ -83,8 +83,8 @@
 								<li><a href="../html/brand-products-list.html">Brand &amp; Products</a></li>
 								<li><a href="../html/cereal-nutrition.html">Cereal &amp; Nutrition</a></li>
 								<li><a href="../html/better-days.html">Better Days</a></li>
-								<!-- 2dpth 있을 경우  a태그에 class="k_icon" 추가 하고 a태그 다음 ul만 추가 해주면됨. -->
-								<li><a href="../html/about-us.html" class="k_icon">About Kellogg's</a>
+								<!-- 2dpth 있을 경우  a태그에 class="btn" 추가 하고 a태그 다음 ul만 추가 해주면됨. -->
+								<li><a href="../html/about-us.html" class="btn">About Kellogg's</a>
 									<ul>
 										<li><a href="../html/about-us.html">회사소개</a></li>
 										<li><a href="#">켈로그의 약속</a></li>
@@ -96,9 +96,14 @@
 							</ul>
 						</div>
 					</div>
-					<ul class="menu_sns">
-						<li><a href="#"><img src="../assets/image/common/sns.png" alt="sns"></a></li>
-					</ul>
+					<div class="link_biz">
+						<div class="sns">
+							<a href="https://www.youtube.com/channel/UC0Ab7cfFW5CZ6AUbQvkChVw" title="유투브 채널 새창으로 이동" target="_blank" class="youtube"><em class="blind">유투브</em></a>
+							<a href="https://instagram.com/kelloggsnutrition_kr?utm_source=ig_profile_share&igshid=dhk0i3mz74xh" title="인스타그램 새창으로 이동" target="_blank" class="instagram"><em class="blind">인스타그램</em></a>
+							<a href="https://blog.naver.com/kelloggs_kr" title="네이버 블로그 새창으로 이동" target="_blank" class="naver_blog"><em class="blind">네이버 블로그</em></a>
+						</div>
+						<div class="language"></div>
+					</div>
 				</div><!-- E: inner_gnb -->
 			</nav>
 		
@@ -107,28 +112,97 @@
 	
 	<div id="container" class="about">
 		<div class="area_index_title">
-			<h3>Contact Us</h3>
+			<h3>About <span>Kellogg's</span></h3> <!-- 1depth 명과 동일하게 맞추기 -->
 		</div>
-		<div class="inner_wrap">
-			콘텐츠<br>콘텐츠<br>콘텐츠<br>콘텐츠<br>콘텐츠<br>콘텐츠<br>콘텐츠<br>콘텐츠<br>콘텐츠<br>콘텐츠<br>콘텐츠<br>
-			콘텐츠<br>콘텐츠<br>콘텐츠<br>콘텐츠<br>콘텐츠<br>콘텐츠<br>콘텐츠<br>콘텐츠<br>콘텐츠<br>콘텐츠<br>콘텐츠<br>
-			콘텐츠<br>콘텐츠<br>콘텐츠<br>콘텐츠<br>콘텐츠<br>콘텐츠<br>콘텐츠<br>콘텐츠<br>콘텐츠<br>콘텐츠<br>콘텐츠<br>
-			콘텐츠<br>콘텐츠<br>콘텐츠<br>콘텐츠<br>콘텐츠<br>콘텐츠<br>콘텐츠<br>콘텐츠<br>콘텐츠<br>콘텐츠<br>콘텐츠<br>
-			콘텐츠<br>콘텐츠<br>콘텐츠<br>콘텐츠<br>콘텐츠<br>콘텐츠<br>콘텐츠<br>콘텐츠<br>콘텐츠<br>콘텐츠<br>콘텐츠<br>
-			콘텐츠<br>콘텐츠<br>콘텐츠<br>콘텐츠<br>콘텐츠<br>콘텐츠<br>콘텐츠<br>콘텐츠<br>콘텐츠<br>콘텐츠<br>콘텐츠<br>
-			콘텐츠<br>콘텐츠<br>콘텐츠<br>콘텐츠<br>콘텐츠<br>콘텐츠<br>콘텐츠<br>콘텐츠<br>콘텐츠<br>콘텐츠<br>콘텐츠<br>
-			콘텐츠<br>콘텐츠<br>콘텐츠<br>콘텐츠<br>콘텐츠<br>콘텐츠<br>콘텐츠<br>콘텐츠<br>콘텐츠<br>콘텐츠<br>콘텐츠<br>
-			콘텐츠<br>콘텐츠<br>콘텐츠<br>콘텐츠<br>콘텐츠<br>콘텐츠<br>콘텐츠<br>콘텐츠<br>콘텐츠<br>콘텐츠<br>콘텐츠<br>
-			콘텐츠<br>콘텐츠<br>콘텐츠<br>콘텐츠<br>콘텐츠<br>콘텐츠<br>콘텐츠<br>콘텐츠<br>콘텐츠<br>콘텐츠<br>콘텐츠<br>
-			콘텐츠<br>콘텐츠<br>콘텐츠<br>콘텐츠<br>콘텐츠<br>콘텐츠<br>콘텐츠<br>콘텐츠<br>콘텐츠<br>콘텐츠<br>콘텐츠<br>
-			콘텐츠<br>콘텐츠<br>콘텐츠<br>콘텐츠<br>콘텐츠<br>콘텐츠<br>콘텐츠<br>콘텐츠<br>콘텐츠<br>콘텐츠<br>콘텐츠<br>
-			콘텐츠<br>콘텐츠<br>콘텐츠<br>콘텐츠<br>콘텐츠<br>콘텐츠<br>콘텐츠<br>콘텐츠<br>콘텐츠<br>콘텐츠<br>콘텐츠<br>
-		</div><!-- E: inner_wrap  -->
-		
+		<div class="inner_wrap_change"><!-- S: inner_wrap_change  -->
+			<div class="inner_title">Contact Us</div>
+			<dl class="contact_us">
+				<dt>농심켈로그(주) 안성공장</dt>
+				<dd>
+					<div class="map_container">
+						<iframe src='https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3185.629535755338!2d127.25114161557735!3d37.01863346307238!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x357b35a9c141b4eb%3A0xb1e39c9101979d58!2z6rK96riw64-EIOyViOyEseyLn
+						CDslYjshLEz64-ZIOqzteuLqDLroZwgMjk!5e0!3m2!1sko!2skr!4v1581577536388!5m2!1sko!2skr' width='600' height='450' frameborder='0' style='border:0;' allowfullscreen=''></iframe>
+					</div>
+					<div class="location">
+						<address>주소: 17567 경기도 안성시 공단2로 29 (경기도 안성시 신소현동 142번지)</address>
+						<dl>
+							<dt>오시는 방법</dt>
+							<dd>
+								<div>
+									<strong>대중교통 이용</strong>
+									안성중대역 하차 후 택시로 10분소요
+								</div>
+								<div>
+									<strong>차량 이동</strong>
+									서안성I.C 방면으로 진입 후 소방서 제1산업단지 방면으로 우회전
+								</div>
+							</dd>
+						</dl>
+					</div>
+				</dd>
+				<dt>농심켈로그(주) 서울사무소</dt>
+				<dd>
+					<div class="map_container">
+						<iframe src='https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3165.3635537344444!2d127.03160401558708!3d37.499342735730565!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x357ca156108e446b%3A0x3f3c82d5149ef65b!2z7ISc7Jq47Yq567OE7IucIOqwleuCqOq1rCDsl63sgrzrj5kg7YWM7Zek656A66GcIDEzNCAxNey4tQ!5e0!3m2!1sko!2skr!4v1581579972035!5m2!1sko!2skr' width='600' height='450' frameborder='0' style='border:0;' allowfullscreen=''></iframe>
+					</div>
+					<div class="location">
+						<address>주소: 06235 서울시 강남구 테헤란로 134 15층 (서울 강남구 역삼동 735-3 포스코타워 역삼 15층)</address>
+						<dl>
+							<dt>오시는 방법</dt>
+							<dd>
+								<div>
+									<strong>대중교통 이용</strong>
+									2호선 역삼역 3번출구, 도보 5분 (400m)
+								</div>
+								<div>
+									<strong>차량 이동</strong>
+									논현로 87길 대로변 위치 (역삼역 -> 강남역 방향)
+								</div>
+							</dd>
+						</dl>
+					</div>
+				</dd>
+			</dl>
+		</div><!-- E: inner_wrap_change  -->
+		<div class="inner_wrap consult">
+			<p>소비자 상담실</p>
+			<p><a href="tel:080-023-6411">080-023-6411</a><span>(수신자 요금부담)</span></p>
+		</div>
 	</div><!--E: container -->
 	
 	<footer id="footer">
-		
+		<a href="#top" class="btn btn_type_3 btn_top"><em class="blind">상단으로 이동</em></a>
+		<div class="info_detail inner_wrap">
+			<div class="widget_list">
+				<a href="#">CONTACT US</a>
+				<i class="bar"></i>
+				<a href="#">SITE MAP</a>
+			</div>
+			<address>
+				안성공장 | 17567 경기도 안성시 공단2로 29 (경기도 안성시 신소현동 142번지)<br>
+				서울본사 | 06235 서울시 강남구 테헤란로 134 15층 (서울 강남구 역삼동 735-3 포스코타워 역삼 15층)
+			</address>
+		</div>
+		<div class="info_base inner_wrap">
+			<div class="logo">
+				<a href="../html/index.html"><img src="../assets/image/common/logo_white.png" alt="kellogg's"></a>
+			</div>
+			<div class="copyright">&copy; 2019 KELLOGG Co Ltd ALL RIGHT RESERVED.</div>
+			<div class="sns">
+				<a href="https://www.youtube.com/channel/UC0Ab7cfFW5CZ6AUbQvkChVw" title="유투브 채널 새창으로 이동" target="_blank" class="youtube"><em class="blind">유투브</em></a>
+				<a href="https://instagram.com/kelloggsnutrition_kr?utm_source=ig_profile_share&igshid=dhk0i3mz74xh" title="인스타그램 새창으로 이동" target="_blank" class="instagram"><em class="blind">인스타그램</em></a>
+				<a href="https://blog.naver.com/kelloggs_kr" title="네이버 블로그 새창으로 이동" target="_blank" class="naver_blog"><em class="blind">네이버 블로그</em></a>
+			</div>
+			<div class="language"></div>
+			
+			<div class="btn_info_open">
+				<!-- open 클래스 추가 시 버튼 변경 -->
+				<button type="button" class="btn btn_type_4 foot_open">
+					<i></i>
+					<i></i>
+				</button>
+			</div>
+		</div> <!--E: inner_wrap  -->
 	</footer><!--E: footer -->
 		
 </div>

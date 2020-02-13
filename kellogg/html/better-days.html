@@ -7,7 +7,7 @@
 	<meta http-equiv="Content-Script-Type" content="text/javascript">
 	<meta http-equiv="Content-Style-Type" content="text/css">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
-	<meta name="format-detection" content="telephone=no">
+	<meta name="format-detection" content="telephone=no"> 
 	
 	<link rel="canonical" href="https://www.kellogg.co.kr/ko_KR/home.html">
 	<meta name="author" content="kellogg">
@@ -25,7 +25,7 @@
 	<meta name="twitter:image" content="">
 	<meta name="twitter:description" content="kellogg">
 	
-	<title>Better Days | Kellogg's</title>
+	<title>Brand &amp; Products | Kellogg's</title>
 	
 	<link rel="shortcut icon" type="image/x-icon" href="../assets/image/common/favicon.ico">
 	
@@ -34,6 +34,7 @@
 	<link rel="stylesheet" href="../assets/css/swiper.css">
 	
 	<link rel="stylesheet" href="../assets/css/kellogg.css">
+	<link rel="stylesheet" href="../assets/css/sub_kellogg.css">
 	
 	<script src="../assets/js/jquery-3.4.1.min.js" charset="utf-8"></script>
 	<script src="../assets/js/jquery.nanoscroller.min.js" charset="utf-8"></script>
@@ -50,32 +51,31 @@
 	<header id="header">
 		<div class="inner_wrap">
 			<h1>
-				<!-- <img srcset="/myproject/assets/image/common/logo_576.png, /myproject/assets/image/common/logo_768.png 1.5x, /myproject/assets/image/common/logo_1280.png 2x" src="/myproject/assets/image/common/logo_1280.png" alt="Kellogg's"> -->
 				<a href="../html/index.html"><img 
 					srcset="../assets/image/common/logo_576.png 576w, 
 					../assets/image/common/logo_768.png 768w, 
 					../assets/image/common/logo_1280.png 1280w"  
 					sizes="(min-width: 1280px) 1280px" 
-					src="../assets/image/common/logo_1280.png" alt="">
+					src="../assets/image/common/logo_1280.png" alt="kellogg's">
 				</a>
 			</h1>
 			<!-- S: mobile/tablet 메뉴 열기 버튼 -->
-			<button type="button" class="button menu_open">
-				<div class="k_icon ham_menu">
-					<i></i>
-					<i></i>
-					<i></i>
-				</div>
-			</button><!-- E: mobile 메뉴 오픈 영역 -->
+			<button type="button" class="btn btn_type_1 menu_open" title="전체메뉴 열기">
+				<i></i>
+				<i></i>
+				<i></i>
+			</button>
+			<!-- E: mobile 메뉴 오픈 영역 -->
 			
 			<nav id="menu_aside">
 				<!-- S: mobile/tablet 메뉴 닫기 버튼 -->
-				<button class="button menu_close">
-					<div class="k_icon close_x">
+				<div class="close_wrap">
+					<button type="button" class="btn btn_type_2 menu_close" title="전체메뉴 닫기">
 						<i></i>
 						<i></i>
-					</div>
-				</button><!-- E: mobile/tablet 메뉴 닫기 버튼 -->
+					</button>
+				</div>
+				<!-- E: mobile/tablet 메뉴 닫기 버튼 -->
 				<div class="gnb_area">
 					<div class="gnb_inner">
 						<div class="custom_scroll_content">
@@ -83,8 +83,8 @@
 								<li><a href="../html/brand-products-list.html">Brand &amp; Products</a></li>
 								<li><a href="../html/cereal-nutrition.html">Cereal &amp; Nutrition</a></li>
 								<li><a href="../html/better-days.html">Better Days</a></li>
-								<!-- 2dpth 있을 경우  a태그에 class="k_icon" 추가 하고 a태그 다음 ul만 추가 해주면됨. -->
-								<li><a href="../html/about-us.html" class="k_icon">About Kellogg's</a>
+								<!-- 2dpth 있을 경우  a태그에 class="btn" 추가 하고 a태그 다음 ul만 추가 해주면됨. -->
+								<li><a href="../html/about-us.html" class="btn">About Kellogg's</a>
 									<ul>
 										<li><a href="../html/about-us.html">회사소개</a></li>
 										<li><a href="#">켈로그의 약속</a></li>
@@ -96,9 +96,14 @@
 							</ul>
 						</div>
 					</div>
-					<ul class="menu_sns">
-						<li><a href="#"><img src="../assets/image/common/sns.png" alt="sns"></a></li>
-					</ul>
+					<div class="link_biz">
+						<div class="sns">
+							<a href="https://www.youtube.com/channel/UC0Ab7cfFW5CZ6AUbQvkChVw" title="유투브 채널 새창으로 이동" target="_blank" class="youtube"><em class="blind">유투브</em></a>
+							<a href="https://instagram.com/kelloggsnutrition_kr?utm_source=ig_profile_share&igshid=dhk0i3mz74xh" title="인스타그램 새창으로 이동" target="_blank" class="instagram"><em class="blind">인스타그램</em></a>
+							<a href="https://blog.naver.com/kelloggs_kr" title="네이버 블로그 새창으로 이동" target="_blank" class="naver_blog"><em class="blind">네이버 블로그</em></a>
+						</div>
+						<div class="language"></div>
+					</div>
 				</div><!-- E: inner_gnb -->
 			</nav>
 		
@@ -107,28 +112,85 @@
 	
 	<div id="container" class="betterdays">
 		<div class="area_index_title">
-			<h3>Better Days</h3>
+			<h3>Better <span>Days</span></h3> <!-- 1depth 명과 동일하게 맞추기 -->
 		</div>
-		<div class="inner_wrap">
-			콘텐츠<br>콘텐츠<br>콘텐츠<br>콘텐츠<br>콘텐츠<br>콘텐츠<br>콘텐츠<br>콘텐츠<br>콘텐츠<br>콘텐츠<br>콘텐츠<br>
-			콘텐츠<br>콘텐츠<br>콘텐츠<br>콘텐츠<br>콘텐츠<br>콘텐츠<br>콘텐츠<br>콘텐츠<br>콘텐츠<br>콘텐츠<br>콘텐츠<br>
-			콘텐츠<br>콘텐츠<br>콘텐츠<br>콘텐츠<br>콘텐츠<br>콘텐츠<br>콘텐츠<br>콘텐츠<br>콘텐츠<br>콘텐츠<br>콘텐츠<br>
-			콘텐츠<br>콘텐츠<br>콘텐츠<br>콘텐츠<br>콘텐츠<br>콘텐츠<br>콘텐츠<br>콘텐츠<br>콘텐츠<br>콘텐츠<br>콘텐츠<br>
-			콘텐츠<br>콘텐츠<br>콘텐츠<br>콘텐츠<br>콘텐츠<br>콘텐츠<br>콘텐츠<br>콘텐츠<br>콘텐츠<br>콘텐츠<br>콘텐츠<br>
-			콘텐츠<br>콘텐츠<br>콘텐츠<br>콘텐츠<br>콘텐츠<br>콘텐츠<br>콘텐츠<br>콘텐츠<br>콘텐츠<br>콘텐츠<br>콘텐츠<br>
-			콘텐츠<br>콘텐츠<br>콘텐츠<br>콘텐츠<br>콘텐츠<br>콘텐츠<br>콘텐츠<br>콘텐츠<br>콘텐츠<br>콘텐츠<br>콘텐츠<br>
-			콘텐츠<br>콘텐츠<br>콘텐츠<br>콘텐츠<br>콘텐츠<br>콘텐츠<br>콘텐츠<br>콘텐츠<br>콘텐츠<br>콘텐츠<br>콘텐츠<br>
-			콘텐츠<br>콘텐츠<br>콘텐츠<br>콘텐츠<br>콘텐츠<br>콘텐츠<br>콘텐츠<br>콘텐츠<br>콘텐츠<br>콘텐츠<br>콘텐츠<br>
-			콘텐츠<br>콘텐츠<br>콘텐츠<br>콘텐츠<br>콘텐츠<br>콘텐츠<br>콘텐츠<br>콘텐츠<br>콘텐츠<br>콘텐츠<br>콘텐츠<br>
-			콘텐츠<br>콘텐츠<br>콘텐츠<br>콘텐츠<br>콘텐츠<br>콘텐츠<br>콘텐츠<br>콘텐츠<br>콘텐츠<br>콘텐츠<br>콘텐츠<br>
-			콘텐츠<br>콘텐츠<br>콘텐츠<br>콘텐츠<br>콘텐츠<br>콘텐츠<br>콘텐츠<br>콘텐츠<br>콘텐츠<br>콘텐츠<br>콘텐츠<br>
-			콘텐츠<br>콘텐츠<br>콘텐츠<br>콘텐츠<br>콘텐츠<br>콘텐츠<br>콘텐츠<br>콘텐츠<br>콘텐츠<br>콘텐츠<br>콘텐츠<br>
+		<div class="inner_title inner_wrap_change">Better Days</div>
+		<div class="inner_wrap_change">
+			<ul class="tab">
+				<li class="on"><a href="better-days.html">더 나은 내일 캠페인</a></li>
+				<li><a href="healthy-land-healthy-rice.html">건강한 땅, 건강한 쌀</a></li>
+				<li><a href="go-green-eco-campaign.html">고 그린 친환경 캠페인</a></li>
+				<li><a href="real-serial-campaign.html">리얼 시리얼 캠페인</a></li>
+			</ul>
+		</div>
+		<div class="inner_wrap inner_wrap_box betterdays_wrap">
+			<div class="sub_title">더 나은 내일 캠페인</div>
+			<div class="betterdays_mobile"><img src="../assets/image/sub/better_days_img_1_360.png" alt="더 나은 내일 캠페인 이미지1"></div>
+			<dl class="img_box cont_1">
+				<dt class="tit">켈로그, 지속가능성 위한 차세대 사회공헌활동에 박차</dt>
+				<dd class="cont">
+					<p class="division">
+						켈로그는 2019년 6월, 차세대 지속가능성을 위한 글로벌 사회공헌 캠페인, ‘더 나은 내일(Kellogg’s® Better Days)를 발표하고, 식량 안보와 기후, 복지 등 사회문제 해결에 한 걸음 더 앞장서기로 했습니다.<br><br>
+						켈로그는 해당 캠페인을 통해 유엔의 지속가능발전목표(SDGs)와 연계해 오는 2030년까지 총 30억명의 사람들과 지역사회 그리고 지구에 긍정적인 변화를 가져오기 위해 노력할 계획입니다.
+					</p>
+					<p>
+						해당 공약 아래 10억명의 결식 예방, 3억 7천 5백만명에게 식량 기부, 여성농업인과 소농가 등 1백만명의 농부 지원, 책임감 있는 원료 공급, 음식물 쓰레기 절감, 재활용 가능한 패키지 공급, 직원들의 자원봉사 등 다양한 활동을 펼쳐 나갈 것입니다.
+					</p>
+				</dd>
+			</dl>
+			<div class="betterdays_mobile"><img src="../assets/image/sub/better_days_img_2_360.png" alt="더 나은 내일 캠페인 이미지2"></div>
+			<dl class="img_box cont_2">
+				<dt class="tit">농심켈로그, 책임감 있는 기업시민으로 한국지역사회에 기여</dt>
+				<dd class="cont">
+					<p class="division">
+						농심켈로그도 이에 동참해 한국사회복지협의회 전국푸드뱅크, 초록우산 어린이재단,자연의 벗 연구소 등과 긴밀히 협력하여 지역 사회와 도움의 손길이 필요한 소외된 이웃을 돕기 위한 사회공헌 활동을 적극적으로 전개해오고 있습니다.<br><br>
+						푸드뱅크 ‘희망 나눔 팩’ 활동, 어린이재단과 보육원 지원 활동, 산불 화재 이재민 대상 기부, 결식 아동을 위한 시리얼 나눔 등 최근 3년간 약 84만 인분이 넘는 시리얼을 지원했으며, 2013년부터의 총 누적액은 75억원 상당에 달합니다.
+					</p>
+					<p>
+						농심켈로그는 앞으로도 책임 있는 기업시민으로서 식량 안보와 기후, 복지 등 다양한 사회문제 해결에 책임을 다하고, 나눔으로 더 큰 가치를 만들기 위해 지속적인 노력을 기울이겠습니다. 
+					</p>
+				</dd>
+			</dl>
+			<div class="video_cont">
+				<iframe src="https://www.youtube.com/embed/N0dLcTgQMgQ" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+			</div>
 		</div><!-- E: inner_wrap  -->
 		
 	</div><!--E: container -->
 	
 	<footer id="footer">
-		
+		<a href="#top" class="btn btn_type_3 btn_top"><em class="blind">상단으로 이동</em></a>
+		<div class="info_detail inner_wrap">
+			<div class="widget_list">
+				<a href="#">CONTACT US</a>
+				<i class="bar"></i>
+				<a href="#">SITE MAP</a>
+			</div>
+			<address>
+				안성공장 | 17567 경기도 안성시 공단2로 29 (경기도 안성시 신소현동 142번지)<br>
+				서울본사 | 06235 서울시 강남구 테헤란로 134 15층 (서울 강남구 역삼동 735-3 포스코타워 역삼 15층)
+			</address>
+		</div>
+		<div class="info_base inner_wrap">
+			<div class="logo">
+				<a href="../html/index.html"><img src="../assets/image/common/logo_white.png" alt="kellogg's"></a>
+			</div>
+			<div class="copyright">&copy; 2019 KELLOGG Co Ltd ALL RIGHT RESERVED.</div>
+			<div class="sns">
+				<a href="https://www.youtube.com/channel/UC0Ab7cfFW5CZ6AUbQvkChVw" title="유투브 채널 새창으로 이동" target="_blank" class="youtube"><em class="blind">유투브</em></a>
+				<a href="https://instagram.com/kelloggsnutrition_kr?utm_source=ig_profile_share&igshid=dhk0i3mz74xh" title="인스타그램 새창으로 이동" target="_blank" class="instagram"><em class="blind">인스타그램</em></a>
+				<a href="https://blog.naver.com/kelloggs_kr" title="네이버 블로그 새창으로 이동" target="_blank" class="naver_blog"><em class="blind">네이버 블로그</em></a>
+			</div>
+			<div class="language"></div>
+			
+			<div class="btn_info_open">
+				<!-- open 클래스 추가 시 버튼 변경 -->
+				<button type="button" class="btn btn_type_4 foot_open">
+					<i></i>
+					<i></i>
+				</button>
+			</div>
+		</div> <!--E: inner_wrap  -->
 	</footer><!--E: footer -->
 		
 </div>
